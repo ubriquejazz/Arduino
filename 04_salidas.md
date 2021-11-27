@@ -6,7 +6,7 @@ Las salidas se dividen en dos niveles o estados: HIGH a 5 V y LOW a 0 V. Por def
 
 Para valores constantes de 5V, 3.3V y 0V (GND) podemos utilizar los pines correspondientes del apartado “POWER” de nuestro Arduino.
 
-![Imagen 0 en Tutorial Arduino: Salidas](/home/gigante/Dropbox/apuntes/Arduino/img04/0e033beb9d846345961fea79a4543898.webp)
+![Imagen 0 en Tutorial Arduino: Salidas](./img04/0e033beb9d846345961fea79a4543898.webp)
 
  
 
@@ -14,7 +14,7 @@ Para valores constantes de 5V, 3.3V y 0V (GND) podemos utilizar los pines corres
 
 Los pines que podemos configurar para que cambien el nivel de salida según nuestro programa son los digitales, es decir, los 1 a 13. En realidad existen otros pines digitales pero no serán tratados en este tutorial.
 
-![Imagen 1 en Tutorial Arduino: Salidas](/home/gigante/Dropbox/apuntes/Arduino/img04/68479cd9811e9c6b8ab5f8227dd26d4b.webp)
+![Imagen 1 en Tutorial Arduino: Salidas](./img04/68479cd9811e9c6b8ab5f8227dd26d4b.webp)
 
 Por defecto estos pines están configurados como entradas así que lo primero que tenemos que hacer para utilizar un pin como salida es configurarlo como tal. Para ello escribimos esta sentencia dentro del apartado *setup* del programa.
 
@@ -76,7 +76,7 @@ El montaje es de lo más sencillo. Insertamos el led en la protoboard. Para no d
 
  
 
-![Imagen 2 en Tutorial Arduino: Salidas](/home/gigante/Dropbox/apuntes/Arduino/img04/2184c3ec82b568b0d264050122bfa551.webp)
+![Imagen 2 en Tutorial Arduino: Salidas](./img04/2184c3ec82b568b0d264050122bfa551.webp)
 
  
 

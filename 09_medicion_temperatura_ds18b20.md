@@ -9,32 +9,32 @@ Existen muchos detractores de este sistema, que ponen de manifiesto que el usarl
 ### **¿Cómo usar las librerías y los ejemplos?**
 
 Esta vez, usaremos unas librerías en nuestro proyecto para controlar el sensor térmico con el sistema OneWire que os hemos comentado. En nuestro post 3, os definimos qué eran las librerías y ahora os explicaremos como usarlas. Arduino tiene una serie de librerías genéricas que podemos usar simplemente escribiendo al principio de nuestro código la sentencia **#include <** *librería* **.h>** repitiendo con todas las librerías que necesitemos.
- 
 
-![Imagen 0 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/21/0c/210c1310590cae7e913f1c2b228c4849.webp)
+
+![Imagen 0 en Tutorial Arduino: Uso de sistema OneWire](./img09/210c1310590cae7e913f1c2b228c4849.webp)
 Ilustración 1 Importación de librerías en IDE Arduino
 
 
 En este ejemplo vamos a usar las librerías propias del sensor en cuestión, en nuestro caso usaremos las librerías [DallasTemperature](http://panamahitek.com/wp-content/uploads/2014/01/DallasTemperature.rar) y [OneWire](http://panamahitek.com/wp-content/uploads/2014/01/OneWire.rar) . Para instalar las librerías propias, o de terceros, una vez descargadas existen 2 métodos:
 
 **1.   Método normal** : Dentro del IDE, nos dirigimos a **Sketch->Importar librería->Ad library** …. Se nos abrirá una ventana de exploración en la que debemos buscar el archivo rar/zip que hemos descargado. Lo seleccionamos y ya la tendremos instalada.
- 
 
-![Imagen 1 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/32/4e/324ece9f74ed45d8c4f0c3d60600978f.webp)
+
+![Imagen 1 en Tutorial Arduino: Uso de sistema OneWire](./img09/324ece9f74ed45d8c4f0c3d60600978f.webp)
 Ilustración 2 Instalación de librerías en IDE Arduino
 
 
 **2.   Método manual** : Si el método anterior no funciona, utilizaremos la instalación manual. Para proceder, descomprimiremos el rar/zip descargado y copiamos la carpeta de la librería en la ruta **Documentos\Arduino\libraries** . Quedando, por ejemplo, de la siguiente manera.
- 
 
-![Imagen 2 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/a2/57/a2577d9a3451f008a6bacc5ea973eac5.webp)
+
+![Imagen 2 en Tutorial Arduino: Uso de sistema OneWire](./img09/a2577d9a3451f008a6bacc5ea973eac5.webp)
 Ilustración 3 Ejemplo de carpeta de librería instalada
 
 
 Una vez instaladas las librerías que vayamos a usar, podremos usar los ejemplos que traen cada una para probar sus accesorios. Es interesante echarles un ojo antes de ponernos a programar como locos, porque de estos ejemplos podemos aprovechar partes de código o ver cómo usa las funciones… y así ahorrarnos mucho trabajo. Para abrir estos ejemplos solo tendremos que dirigirnos dentro del IDE a **Archivo->Ejemplos** y ahí veremos todas las librerías disponibles y dentro de cada una, sus ejemplos correspondientes.
- 
 
-![Imagen 3 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/30/57/3057e4c815790ab8b9a258723d6bb44a.webp)
+
+![Imagen 3 en Tutorial Arduino: Uso de sistema OneWire](./img09/3057e4c815790ab8b9a258723d6bb44a.webp)
 Ilustración 4 Cargar ejemplos
 
  
@@ -52,17 +52,17 @@ Para empezar con este ejemplo detallaremos el material necesario.
 •   Cables para conectar todo
 
 En esta ocasión, es muy importante que prestéis atención al montaje del circuito. No es para nada difícil, pero si no está correcto el sensor dará medidas erróneas o incluso puede estropearse. El esquema es el siguiente:
- 
 
- 
 
-![Imagen 4 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/1a/ff/1aff72f5694049f113c88d7c9a6a9546.webp)
+
+
+![Imagen 4 en Tutorial Arduino: Uso de sistema OneWire](./img09/1aff72f5694049f113c88d7c9a6a9546.webp)
 Ilustración 5 Montaje para el sensor ds18b20
 
 
 Como observamos en el circuito, alimentaremos a través del pin DATA, por medio de la resistencia de 4,7kΩ, y los pines VCC y GND van conectados entre sí y a tierra. [Aquí](http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Temp/DS18B20.pdf) en el datasheet del sensor podéis ver cómo va el patillaje, o bien si usáis la versión sumergible, como nosotros, la correspondencia de los 3 cables sería: [Rojo]=VCC, [Azul o Negro] = GND y [Amarillo o Blanco] = DATA.
 Una vez conectado todo correctamente, nos dirigiremos al IDE y escribiremos el siguiente código.
- 
+
 
 ```
 /******************************/
@@ -110,20 +110,20 @@ En el programa, simplemente comenzaremos importando las librerías, OneWire y Da
 Con la línea *OneWire ourWire(Pin)* , le decimos al sensor a través de que pin se debe comunicar con Arduino y con *DallasTemperature sensors(&ourWire)* llamaremos a la librería de Dallas para que interprete los datos enviados y recibidos por nuestro bus.
 Seguidamente, en nuestra función de setup, iniciaremos la comunicación serial a 9600 bits/seg y con la sentencia *sensors.begin()* activaremos los sensores que estemos usando.
 Nuestro código en bucle, lo que hará será primero preparar al sensor ds18b20 para medir, usando la función *sensors.requestTemperatures()* y con la línea *Serial.print(sensors.getTempCByIndex(0))* tomará la medida y la imprimirá, por el monitor serial y en grados centígrados, en una única sentencia. Finalmente añadiremos la impresión del texto “ *Grados Centígrados* ” y haremos una pausa de 1 segundo para que el sensor no esté realizando miles de medidas constantemente.
- 
-
- 
 
 
-![Imagen 5 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/dd/16/dd1602c31745e30d09c8e55b1f1847c2.webp)
+
+
+
+![Imagen 5 en Tutorial Arduino: Uso de sistema OneWire](./img09/dd1602c31745e30d09c8e55b1f1847c2.webp)
 
 Ilustración 6 Visualización de la temperatura en el monitor serial
 
 
 Como habéis podido comprobar, es muy sencillo y práctico utilizar este sistema. Solo hay que familiarizarse con las funciones específicas de la librería de cada sensor para sacarles el máximo provecho. Os recomendamos que leáis que funciones específicas trae cada librería y juguéis un poco con ellas antes de poneros a programar vuestro proyecto, seguro que encontraréis algunas funciones o ejemplos propios que os simplifican el código bastante.
- 
 
-![Imagen 6 en Tutorial Arduino: Uso de sistema OneWire](https://dc722jrlp2zu8.cloudfront.net/media/cache/71/9d/719d38bda8072e0f0316d87605d4832b.webp)
+
+![Imagen 6 en Tutorial Arduino: Uso de sistema OneWire](./img09/719d38bda8072e0f0316d87605d4832b.webp)
 
 Ilustración 7 Montaje para el sensor ds18b20
 

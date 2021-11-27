@@ -18,7 +18,7 @@ Suponiendo que ya tenemos nuestra placa Arduino Uno, nuestra protoboard y un jue
 
 Viendo la foto puede parecer complicado por la cantidad de cables que tiene, pero en realidad tener más conexiones no lo hace más difícil. Si hacemos las conexiones paso a paso nos funcionará a la primera. La que vamos a ver no es la única forma de conectar la pantalla, pero así podemos utilizar los códigos de ejemplo de la IDE para LCD sin cambiar ninguna línea. También tenéis que tener en cuenta que las pantallas las suelen vender con el agujero para soldarle un pin macho o un cable. Yo le he soldado una tira de pines macho para poder insertarla en la protoboard pero si no queréis soldar podéis meter los cables en los agujero con cuidado de que las puntas no se toquen entre sí. Ahora vamos a ver de izquierda a derecha como se conecta cada pin de la pantalla. Como los pines 5V y GND los vamos a utilizar en más de una conexión, los conectamos a las filas largas de nuestra protoboard y cuando un pin de la pantalla se corresponda con 5V o GND lo conectaremos con su fila correspondiente.
 
-![Imagen 0 en Tutorial Arduino: Pantalla LCD](https://dc722jrlp2zu8.cloudfront.net/media/cache/eb/6d/eb6db299d70eebd30792712d1ba916c5.webp)
+![Imagen 0 en Tutorial Arduino: Pantalla LCD](./img10/eb6db299d70eebd30792712d1ba916c5.webp)
 
 - VSS a la fila GND
 - VDD a la fila 5 V
@@ -39,7 +39,7 @@ Viendo la foto puede parecer complicado por la cantidad de cables que tiene, per
 - Pata GND del sensor a la fila GND
 - Si la pantalla no tiene iluminación prescindiremos de los pines A y K
 
-![Imagen 1 en Tutorial Arduino: Pantalla LCD](https://dc722jrlp2zu8.cloudfront.net/media/cache/ee/f6/eef69618e52635525f0f349072d54454.webp)
+![Imagen 1 en Tutorial Arduino: Pantalla LCD](./img10/eef69618e52635525f0f349072d54454.webp)
 
  
 

@@ -11,19 +11,19 @@ Una vez comentado esto, definiremos la **comunicación serie** como una “inter
 
  
 
-Para poder establecer esta comunicación usaremos el **monitor serial** que tenemos en el IDE. Lo encontraremos pulsando el botón![Imagen 0 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/ea/75/ea759f3272231769a69a23ac8c3e61d1.webp), con el mismo nombre, que tenemos arriba a la derecha.
- 
+Para poder establecer esta comunicación usaremos el **monitor serial** que tenemos en el IDE. Lo encontraremos pulsando el botón![Imagen 0 en Tutorial Arduino: Comunicación serie](./img07/ea759f3272231769a69a23ac8c3e61d1.webp), con el mismo nombre, que tenemos arriba a la derecha.
 
- 
 
-![Imagen 1 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/38/74/3874b01f0d4bc21fd6318812f7f31bb7.webp)
+
+
+![Imagen 1 en Tutorial Arduino: Comunicación serie](./img07/3874b01f0d4bc21fd6318812f7f31bb7.webp)
 
 Ilustración 1 Botón de Monitor Serial
 
 Una vez que lo pulsemos, se abrirá el monitor en el que podremos recibir información de Arduino y escribirle nosotros, tanto información que nos solicite como órdenes.
- 
 
-![Imagen 2 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/32/da/32da4de006d07f454e12791d6efe8a72.webp)
+
+![Imagen 2 en Tutorial Arduino: Comunicación serie](./img07/32da4de006d07f454e12791d6efe8a72.webp)
 
 Ilustración 2 Monitor Serial
 
@@ -43,11 +43,11 @@ En la mayoría de Arduinos podemos encontrar 2 tipos de conexión serie para las
 
 Para entender mejor todo lo explicado, vamos a realizar un ejemplito muy sencillo pero que nos sirve para darnos cuenta de lo útil y potente que es esta característica de Arduino.
 Comenzaremos realizando una simplificación del esquema de montaje que utilizamos en el post 3 para el semáforo, utilizando los mismos elementos pero para un solo Led.
- 
 
- 
 
-![Imagen 3 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/52/7e/527e368a0758bda091800972eccf0483.webp)
+
+
+![Imagen 3 en Tutorial Arduino: Comunicación serie](./img07/527e368a0758bda091800972eccf0483.webp)
 
 Ilustración 3 Montaje para encender Led
 
@@ -110,11 +110,11 @@ Divertido ¿verdad?.
 En el siguiente ejemplo, utilizaremos la comunicación serial para que Arduino nos dé información, que necesitamos, de nuestro circuito. Le pediremos que nos dé el valor que tienen 3 potenciómetros conectados a un Led RGB para saber el color exacto que está dando. Éste es un ejemplo bastante usado en distintos cursos para enseñar cómo funciona la comunicación serial en Arduino, pero nos parece útil y divertido realizarlo con vosotros.
 Con este circuito, controlaremos qué cantidad de rojo, verde y azul dará nuestro Led y además, gracias a la comunicación serial, Arduino nos dirá que color exacto está dando y podremos usar estos datos con otros programas o decirle nosotros al sistema que dé un color exacto que queremos.
 Antes de comenzar, explicaremos que es un **Led RGB** . Es un Led que dentro lleva 3 colores independientes que mezclan su intensidad para proporcionar casi toda la gama de colores. Existen de dos tipos, de cátodo común y de ánodo común. Esto solo quiere decir que los 3 Leds internos que lleva el RGB comparten una de las conexiones, ya sea el cátodo que se conecta a tierra o el ánodo que se conecta a la alimentación. Es fácil identificar cual es la conexión compartida, ya que estos Leds tienen 4 filamentos y el más largo es el común. Los otros 3 filamentos son los que controlan cada color. Da igual el tipo que usemos, siempre que los conectemos correctamente.
- 
 
- 
 
-![Imagen 4 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/82/3d/823dbb1c022efe9ce97b7d11ebb9835c.webp)
+
+
+![Imagen 4 en Tutorial Arduino: Comunicación serie](./img07/823dbb1c022efe9ce97b7d11ebb9835c.webp)
 
 Ilustración 4 Conexiones de Led RGB (arduino utfsm)
 
@@ -126,9 +126,9 @@ Para realizar este ejemplo necesitaremos los siguientes elementos:
 •   3 x Potenciómetros lineales de 10kΩ
 •   Cables para conectar todo
 El circuito que debemos montar es el siguiente:
- 
 
-![Imagen 5 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/4b/b1/4bb155031016592556a5ef4be36e772c.webp)
+
+![Imagen 5 en Tutorial Arduino: Comunicación serie](./img07/4bb155031016592556a5ef4be36e772c.webp)
 Ilustración 5 Montaje de control de Led RGB
 
 Hay que resaltar, que conectaremos cada ánodo a pines digitales PWM del Arduino para controlar la intensidad que enviamos a cada uno. Nosotros usaremos los **pines digitales 3, 5 y 6** , y los **analógicos 0, 1, y 2** .
@@ -187,14 +187,14 @@ void loop(){
 Si prestamos atención al código, vemos que no tenemos funciones que no conozcamos. Solo destacar que, como la función *analogRead* lee valores entre 0-1023 y *analogWrite* los escribe entre 0-255, para transformar los valores de uno a otro dividiremos el valor leído por *analogRead* entre 4 para obtener una relación aproximada y suficientemente buena. El resto del programa, con lo aprendido en los post anteriores, se entiende perfectamente.
 Una vez que tenemos todo listo, podemos ver cómo, mientras movemos los potenciómetros, el Led RGB va creando distintos colores y en el monitor serial nos aparecen los valores de intensidad que se están utilizando para conseguirlos. Con estos valores podemos dirigirnos a cualquier programa de edición gráfica y utilizar ese color exacto, o viceversa.
 Probaremos a conseguir el color del logo de **OpenWebinars.net** . Primero, abrimos el logo con Paint y haremos clic en la herramienta “Selector de color”. Picaremos en el color del logo y después pulsaremos en “Editar colores”. En la ventana emergente ya podremos ver los valores RGB de nuestro color.
- 
 
-![Imagen 6 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/76/73/76734e97d61a6d1cd6c2b3de6ce5d934.webp)
+
+![Imagen 6 en Tutorial Arduino: Comunicación serie](./img07/76734e97d61a6d1cd6c2b3de6ce5d934.webp)
 Ilustración 6 Selección de valores RGB de una imagen usando Paint
 
 Ahora, si metemos esos valores en Arduino utilizando los potenciómetros, nuestro Led RGB brillará con el color que buscábamos. Podemos jugar con los colores y usarlos como más nos diviertan.
 
-![Imagen 7 en Tutorial Arduino: Comunicación serie](https://dc722jrlp2zu8.cloudfront.net/media/cache/a6/1b/a61b4460ec64983a7f227c0f0948e588.webp)
+![Imagen 7 en Tutorial Arduino: Comunicación serie](./img07/a61b4460ec64983a7f227c0f0948e588.webp)
 Ilustración 7 Montaje de control Led RGB
 
  

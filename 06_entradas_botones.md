@@ -20,17 +20,17 @@ Para realizar todos los ejemplos necesitaremos los siguientes elementos:
 •   1 x Resistencia de 10kΩ (puede valer de 1 ó 5 kΩ)
 •   Cables para conectar todo
 Con todo comenzaremos a montar nuestro circuito como se describe en el siguiente esquema.
- 
 
-![Imagen 0 en Tutorial Arduino: Entradas (2): Botones](https://dc722jrlp2zu8.cloudfront.net/media/cache/d1/f8/d1f8e6081f6781c53eb80251cc577937.webp)
+
+![Imagen 0 en Tutorial Arduino: Entradas (2): Botones](./img06/d1f8e6081f6781c53eb80251cc577937.webp)
 
 Ilustración 1 Esquema de montaje del interruptor.
 
 
 Usaremos el pin **2** para encender el led y el **4** para saber el estado del botón. Al montarlo debemos tener en cuenta un par de detalles. Primero, que conectemos correctamente la polaridad del led, siguiendo las indicaciones que os dimos en el ejemplo del semáforo. Segundo, que usemos la **resistencia de 10kΩ para conectar el botón a tierra** . Esto es muy importante, ya que con eso protegemos a nuestra placa de crear un cortocircuito a tierra que podría deteriorarla. La resistencia de 220Ω, como en ejemplos anteriores, la usaremos para conectar el led a tierra.
- 
 
-![Imagen 1 en Tutorial Arduino: Entradas (2): Botones](https://dc722jrlp2zu8.cloudfront.net/media/cache/58/38/5838382b7dc0a838b9074ac5516435c4.webp)
+
+![Imagen 1 en Tutorial Arduino: Entradas (2): Botones](./img06/5838382b7dc0a838b9074ac5516435c4.webp)
 
 Ilustración 2 Montaje real para ejemplos de botones e interruptores
 
@@ -194,9 +194,9 @@ pulsadorAnt=pulsador;
 
 Si cargásemos ya este nuevo código a la placa, veríamos que nuestro problema se ha solucionado casi del todo, pero que aún, algunas veces, falla su funcionamiento. Esto es debido a la propia construcción del botón.
 Un botón, internamente, no es más que dos láminas metálicas que se unen o separan por la acción de un resorte. En el momento de la unión, o separación, de las láminas, el resorte provoca una serie de rebotes entre las láminas que Arduino es capaz de detectar.
- 
 
-![Imagen 2 en Tutorial Arduino: Entradas (2): Botones](https://dc722jrlp2zu8.cloudfront.net/media/cache/48/a3/48a3256899885eed23f030df989556b9.webp)
+
+![Imagen 2 en Tutorial Arduino: Entradas (2): Botones](./img06/48a3256899885eed23f030df989556b9.webp)
 
 Ilustración 3 Gráfico del efecto rebote en el apagado y encendido de un botón.
 

@@ -12,7 +12,7 @@ El bloque de código debe tener 2 partes, o funciones principales, que siempre d
 
  
 
-![Imagen 0 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/dbca194a81008ade37370bf4fa06134b.webp)
+![Imagen 0 en Tutorial Arduino: Ejemplo Semáforo](./img03/dbca194a81008ade37370bf4fa06134b.webp)
 *Partes básicas de un código*
 
  
@@ -33,7 +33,7 @@ Abajo podemos ver un ejemplo simple de cómo debe estructurarse un código.
 
  
 
-![Imagen 1 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/cb15ca38724a3b38ac6217a7902701f9.webp)
+![Imagen 1 en Tutorial Arduino: Ejemplo Semáforo](./img03/cb15ca38724a3b38ac6217a7902701f9.webp)
 *Cómo debe estructurarse un código*
 
 ### Sentencias básicas, funciones y librerías
@@ -58,16 +58,16 @@ Por último nombraremos un par de pequeños detalles necesarios para poder progr
 
 ### Compilación y carga.
 
-Una vez que hayamos escrito nuestro código en la IDE Arduino procederemos a verificar que está correctamente escrito. Para ello pulsamos el botón![Imagen 2 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/0e3053d969c252f0cc0d25c475fb71cc.webp)arriba a la izquierda. Arduino leerá el texto y nos dirá si es correcto o no. Para ello lo que hará será compilarlo, que significa traducir el código del lenguaje de programación a un lenguaje que entienda el microcontrolador directamente.
+Una vez que hayamos escrito nuestro código en la IDE Arduino procederemos a verificar que está correctamente escrito. Para ello pulsamos el botón![Imagen 2 en Tutorial Arduino: Ejemplo Semáforo](./img03/0e3053d969c252f0cc0d25c475fb71cc.webp)arriba a la izquierda. Arduino leerá el texto y nos dirá si es correcto o no. Para ello lo que hará será compilarlo, que significa traducir el código del lenguaje de programación a un lenguaje que entienda el microcontrolador directamente.
 
 En el caso de contener un error nos aparecerá en la consola una explicación orientativa del error.
 
-![Imagen 3 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/4ee2d8938904d723ef2adc1189dc13ee.webp)
+![Imagen 3 en Tutorial Arduino: Ejemplo Semáforo](./img03/4ee2d8938904d723ef2adc1189dc13ee.webp)
 *Verificando el código*
 
  
 
-![Imagen 4 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/b40cf73f4a61629e607383ec8c9f26ba.webp)
+![Imagen 4 en Tutorial Arduino: Ejemplo Semáforo](./img03/b40cf73f4a61629e607383ec8c9f26ba.webp)
 
  
 
@@ -79,7 +79,7 @@ En el caso de contener un error nos aparecerá en la consola una explicación or
 
  
 
-![Imagen 5 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/f6059ddc292e463101c9be828ebfd2bd.webp)
+![Imagen 5 en Tutorial Arduino: Ejemplo Semáforo](./img03/f6059ddc292e463101c9be828ebfd2bd.webp)
 
  
 
@@ -91,9 +91,9 @@ En el caso de contener un error nos aparecerá en la consola una explicación or
 
  
 
-Si la compilación ha sido correcta, ya podremos cargar nuestro programa al Arduino. Para ello, con la placa conectada por USB, pulsamos el botón de carga![Imagen 6 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/0f5c3d6eba4a8e787ea5ac491cb5ed2c.webp)y esperamos a que termine.
+Si la compilación ha sido correcta, ya podremos cargar nuestro programa al Arduino. Para ello, con la placa conectada por USB, pulsamos el botón de carga![Imagen 6 en Tutorial Arduino: Ejemplo Semáforo](./img03/0f5c3d6eba4a8e787ea5ac491cb5ed2c.webp)y esperamos a que termine.
 
-![Imagen 7 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/1efe3364f9d20ecde3f1038a1b3737e3.webp)
+![Imagen 7 en Tutorial Arduino: Ejemplo Semáforo](./img03/1efe3364f9d20ecde3f1038a1b3737e3.webp)
 *Carga de programa terminada*
 
 ### Ejemplo: Semáforo
@@ -118,7 +118,7 @@ Empezaremos nuestro primer proyecto describiendo los elementos que vamos a neces
 
 Una vez que tenemos todo, hacemos nuestro montaje siguiendo el siguiente esquema.
 
-![Imagen 8 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/32c7a5c39b1c7b38a4002cf882ef92c8.webp)
+![Imagen 8 en Tutorial Arduino: Ejemplo Semáforo](./img03/32c7a5c39b1c7b38a4002cf882ef92c8.webp)
 
 **Esquema de montaje del semáforo**
 
@@ -128,7 +128,7 @@ Una vez que tenemos todo, hacemos nuestro montaje siguiendo el siguiente esquema
 
 Utilizaremos los pines digitales **2** (rojo), **4** (amarillo) y **7** (verde). Al conectar los Leds debéis tener en cuenta que tienen polaridad, por lo que tenéis que colocarlos bien para que funcionen. En los Leds la patilla corta, o el lado que está achatado, es el negativo e irá conectado a tierra (GND en la placa) a través de una resistencia. La patilla larga, o lado redondeado, es el positivo y se conectará al pin del Arduino correspondiente.
 
-![Imagen 9 en Tutorial Arduino: Ejemplo Semáforo](/home/gigante/Dropbox/apuntes/Arduino/img03/8fd83afdc3cf04097194eb83dab666c9.webp)
+![Imagen 9 en Tutorial Arduino: Ejemplo Semáforo](./img03/8fd83afdc3cf04097194eb83dab666c9.webp)
 
 *Protoboard del proyecto semáforo*
 

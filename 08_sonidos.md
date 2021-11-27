@@ -22,9 +22,9 @@ Un zumbador es un elemento parecido a un altavoz pero sólo emite zumbidos (típ
 
 Para hacerlo sonar utilizaremos los pines 13 y GND. El montaje no merece más explicación que la de la imagen.
 
-![Imagen 0 en Tutorial Arduino: Sonidos con Arduino](https://dc722jrlp2zu8.cloudfront.net/media/cache/c4/46/c446e2dc70725923fb0607030cdd41da.webp)
+![Imagen 0 en Tutorial Arduino: Sonidos con Arduino](./img08/c446e2dc70725923fb0607030cdd41da.webp)
 
-![Imagen 1 en Tutorial Arduino: Sonidos con Arduino](https://dc722jrlp2zu8.cloudfront.net/media/cache/3e/e7/3ee7330d2f188899b6e8413a716d8d12.webp)
+![Imagen 1 en Tutorial Arduino: Sonidos con Arduino](./img08/3ee7330d2f188899b6e8413a716d8d12.webp)
 
  
 
@@ -61,13 +61,13 @@ Música
 En este punto utilizaremos un pequeño altavoz. Podéis aprovechar uno que tengáis en algún aparato que no utilicéis.
 El mismo montaje servirá para los dos ejemplos siguientes. El primero consistirá en reproducir una escala de 220 a 440 HZ con todos sus semitonos. En el segundo reproduciremos música.
 
-![Imagen 2 en Tutorial Arduino: Sonidos con Arduino](https://dc722jrlp2zu8.cloudfront.net/media/cache/09/ba/09ba34442648b6d4add224bdf9b266a7.webp)
+![Imagen 2 en Tutorial Arduino: Sonidos con Arduino](./img08/09ba34442648b6d4add224bdf9b266a7.webp)
 
 Si os fijáis en el esquema he puesto un condensador (~0.20€) en serie con el altavoz. Ésto es para eliminar cualquier componente de continua. Tened en cuenta que si elegís valores muy pequeños puede recortar las frecuencias más bajas. Con valores de 47 uF o mayores va bien. IMPORTANTE: Si usáis condensadores electrolíticos (los cilíndricos) tenéis que tener en cuenta que tienen polaridad y si lo colocáis al revés pueden explotar . Fijaros que tienen una franja con signos “-” en la pata negativa.
 
-![Imagen 3 en Tutorial Arduino: Sonidos con Arduino](https://dc722jrlp2zu8.cloudfront.net/media/cache/46/cf/46cf05832e5d40815daa3612dfb5741c.webp)
+![Imagen 3 en Tutorial Arduino: Sonidos con Arduino](./img08/46cf05832e5d40815daa3612dfb5741c.webp)
 
-![Imagen 4 en Tutorial Arduino: Sonidos con Arduino](https://dc722jrlp2zu8.cloudfront.net/media/cache/98/b2/98b2e3f99452c21417ecb8b6410fe958.webp)
+![Imagen 4 en Tutorial Arduino: Sonidos con Arduino](./img08/98b2e3f99452c21417ecb8b6410fe958.webp)
 
 Vamos con el primer ejemplo. Para no almacenar todas las frecuencias y tener que escribir la función *tone* en nuestro código cada vez que queramos una nueva nota, haremos un pequeño truco. Almacenaremos sólo el valor de la frecuencia inicial, y las sucesivas notas tendrán la frecuencia de la anterior multiplicada por 1,059. De este modo escribiremos una sola vez la función para hacerlo sonar y un bucle *for* será el encargado de ir incrementando el valor de la frecuencia.
 

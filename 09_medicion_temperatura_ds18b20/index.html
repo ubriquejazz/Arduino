@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>09 medicion temperatura ds18b20 - Arduino</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "09 medicion temperatura ds18b20";
+    var mkdocs_page_input_path = "09_medicion_temperatura_ds18b20.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Arduino</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">1. ¿Qué es Arduino?</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">2. El IDE de Arduino</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">3. Ejemplo.- Semáforo</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../04_pages_app.md">4. Pages app</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../05_message_board_app.md">5. Message Board app</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../06_blog_app.md">6. Blog app</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../07_formularios.md">7. Formularios</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../08_cuentas_de_usuarios.md">8. Cuentas de Usuarios</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../09_modelo_de_usuario_personalizado.md">9. Modelo de Usuario Personalizado</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../10_autenticacion_de_usuarios.md">10. Autenticación de Usuarios</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../11_bootstrap.md">11. Bootstrap</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../12_cambio_y_restauracion_de_contrasenas.md">12. Cambio y Restauración de Contraseñas</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../13_email.md">13. Email</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../14_newspaper_app.md">14. Newspaper app</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../15_permisos_y_autorizacion.md">15. Permisos y Autorización</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../16_comentarios.md">16. Comentarios</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="../17_docker.md">17. Docker</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Arduino</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>09 medicion temperatura ds18b20</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="que-es-el-sistema-onewire">¿Qué es el sistema OneWire?</h2>
+<p>En este post, realizaremos un ejemplo de medición de temperatura con el sensor <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">ds18b20</a>. Este sensor, aparte de tener una buena precisión y una versión sumergible, funciona utilizando un sistema de conexionado muy particular. Este sistema se denomina <strong>OneWire</strong> . Con él conseguimos enviar y recibir datos por un único cable. Esto tiene sus ventajas e inconvenientes, pero no deja de ser una opción muy a tener en cuenta cuando vamos justos de conexiones de control para nuestro proyecto, ya que nos ahorramos un cable en cada sensor.
+En otro ejemplo, ya realizamos mediciones de temperatura con un sensor. Lo interesante de este ejemplo no es el medir la temperatura, si no aprender el funcionamiento del sistema OneWire, para poder usarlo en cualquier sensor que lo utilice, y la instalación e importado de librerías de terceros.
+Existen muchos detractores de este sistema, que ponen de manifiesto que el usarlo exige unos códigos algo complicados…y que el conexionado no es demasiado intuitivo… La verdad es que ni son tan complicados los códigos, ya que las librerías propias y los ejemplos que traen estos sensores son una buena herramienta, ni es tan complicada su conexión, solo hay que seguir el esquema que os daremos posteriormente. Como veréis en Internet, la mayoría de errores y problemas de las personas que los usan radican en un mal conexionado.</p>
+<h3 id="como-usar-las-librerias-y-los-ejemplos"><strong>¿Cómo usar las librerías y los ejemplos?</strong></h3>
+<p>Esta vez, usaremos unas librerías en nuestro proyecto para controlar el sensor térmico con el sistema OneWire que os hemos comentado. En nuestro post 3, os definimos qué eran las librerías y ahora os explicaremos como usarlas. Arduino tiene una serie de librerías genéricas que podemos usar simplemente escribiendo al principio de nuestro código la sentencia <strong>#include &lt;</strong> <em>librería</em> <strong>.h&gt;</strong> repitiendo con todas las librerías que necesitemos.</p>
+<p><img alt="Imagen 0 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/210c1310590cae7e913f1c2b228c4849.webp" />
+Ilustración 1 Importación de librerías en IDE Arduino</p>
+<p>En este ejemplo vamos a usar las librerías propias del sensor en cuestión, en nuestro caso usaremos las librerías <a href="http://panamahitek.com/wp-content/uploads/2014/01/DallasTemperature.rar">DallasTemperature</a> y <a href="http://panamahitek.com/wp-content/uploads/2014/01/OneWire.rar">OneWire</a> . Para instalar las librerías propias, o de terceros, una vez descargadas existen 2 métodos:</p>
+<p><strong>1.   Método normal</strong> : Dentro del IDE, nos dirigimos a <strong>Sketch-&gt;Importar librería-&gt;Ad library</strong> …. Se nos abrirá una ventana de exploración en la que debemos buscar el archivo rar/zip que hemos descargado. Lo seleccionamos y ya la tendremos instalada.</p>
+<p><img alt="Imagen 1 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/324ece9f74ed45d8c4f0c3d60600978f.webp" />
+Ilustración 2 Instalación de librerías en IDE Arduino</p>
+<p><strong>2.   Método manual</strong> : Si el método anterior no funciona, utilizaremos la instalación manual. Para proceder, descomprimiremos el rar/zip descargado y copiamos la carpeta de la librería en la ruta <strong>Documentos\Arduino\libraries</strong> . Quedando, por ejemplo, de la siguiente manera.</p>
+<p><img alt="Imagen 2 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/a2577d9a3451f008a6bacc5ea973eac5.webp" />
+Ilustración 3 Ejemplo de carpeta de librería instalada</p>
+<p>Una vez instaladas las librerías que vayamos a usar, podremos usar los ejemplos que traen cada una para probar sus accesorios. Es interesante echarles un ojo antes de ponernos a programar como locos, porque de estos ejemplos podemos aprovechar partes de código o ver cómo usa las funciones… y así ahorrarnos mucho trabajo. Para abrir estos ejemplos solo tendremos que dirigirnos dentro del IDE a <strong>Archivo-&gt;Ejemplos</strong> y ahí veremos todas las librerías disponibles y dentro de cada una, sus ejemplos correspondientes.</p>
+<p><img alt="Imagen 3 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/3057e4c815790ab8b9a258723d6bb44a.webp" />
+Ilustración 4 Cargar ejemplos</p>
+<h3 id="ejemplo-medicion-de-temperatura-con-sensor-ds18b20">Ejemplo: Medición de temperatura con sensor ds18b20</h3>
+<p>Para empezar con este ejemplo detallaremos el material necesario.</p>
+<p>•   1 x Arduino UNO R3
+•   1 x Protoboard
+•   1 x Sensor de Temperatura ds18b20 (versión sumergible)
+•   1 x Resistencia de 4,7kΩ
+•   Cables para conectar todo</p>
+<p>En esta ocasión, es muy importante que prestéis atención al montaje del circuito. No es para nada difícil, pero si no está correcto el sensor dará medidas erróneas o incluso puede estropearse. El esquema es el siguiente:</p>
+<p><img alt="Imagen 4 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/1aff72f5694049f113c88d7c9a6a9546.webp" />
+Ilustración 5 Montaje para el sensor ds18b20</p>
+<p>Como observamos en el circuito, alimentaremos a través del pin DATA, por medio de la resistencia de 4,7kΩ, y los pines VCC y GND van conectados entre sí y a tierra. <a href="http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Temp/DS18B20.pdf">Aquí</a> en el datasheet del sensor podéis ver cómo va el patillaje, o bien si usáis la versión sumergible, como nosotros, la correspondencia de los 3 cables sería: [Rojo]=VCC, [Azul o Negro] = GND y [Amarillo o Blanco] = DATA.
+Una vez conectado todo correctamente, nos dirigiremos al IDE y escribiremos el siguiente código.</p>
+<pre><code>/******************************/
+/*  Medir Temperatura ds18b20 */
+/******************************/
+
+/*** Librerías ***/
+
+#include &lt;OneWire.h&gt;                 //Se importan las librerías
+#include &lt;DallasTemperature.h&gt;
+
+//** Definiciones **//
+
+#define Pin 2                        //Se declara el pin donde se conectará la DATA
+
+OneWire ourWire(Pin);                //Se establece el pin declarado como bus para la comunicación OneWire
+
+DallasTemperature sensors(&amp;ourWire); //Se llama a la librería DallasTemperature
+
+//** Programa **//
+
+void setup() {
+delay(1000);
+Serial.begin(9600);
+sensors.begin();                     //Se inician los sensores
+}
+
+void loop() {
+sensors.requestTemperatures();       //Prepara el sensor para la lectura
+
+Serial.print(sensors.getTempCByIndex(0)); //Se lee e imprime la temperatura en grados Centigrados
+Serial.println(&quot; Grados Centigrados&quot;);
+
+delay(1000);                         //Se provoca una parada de 1 segundo antes de la próxima lectura
+
+}
+</code></pre>
+<p>(Panama hiteck)</p>
+<p>En el programa, simplemente comenzaremos importando las librerías, OneWire y DallasTemperature, de la forma que comentábamos más arriba. Continuaremos definiendo el pin que utilizaremos como bus de datos. Para ello usaremos la sentencia <em>#define</em> , la cual nos permite crear un valor constante pero con la ventaja de no consumir la RAM que usaría, al compilar, la creación de una variable. Hay que tener la precaución de escribir correctamente las definiciones por que pueden provocar el lastrado de errores a lo largo de todo el código si no se hace bien. En nuestro caso asignaremos el <strong>pin 2</strong> para el bus.
+Con la línea <em>OneWire ourWire(Pin)</em> , le decimos al sensor a través de que pin se debe comunicar con Arduino y con <em>DallasTemperature sensors(&amp;ourWire)</em> llamaremos a la librería de Dallas para que interprete los datos enviados y recibidos por nuestro bus.
+Seguidamente, en nuestra función de setup, iniciaremos la comunicación serial a 9600 bits/seg y con la sentencia <em>sensors.begin()</em> activaremos los sensores que estemos usando.
+Nuestro código en bucle, lo que hará será primero preparar al sensor ds18b20 para medir, usando la función <em>sensors.requestTemperatures()</em> y con la línea <em>Serial.print(sensors.getTempCByIndex(0))</em> tomará la medida y la imprimirá, por el monitor serial y en grados centígrados, en una única sentencia. Finalmente añadiremos la impresión del texto “ <em>Grados Centígrados</em> ” y haremos una pausa de 1 segundo para que el sensor no esté realizando miles de medidas constantemente.</p>
+<p><img alt="Imagen 5 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/dd1602c31745e30d09c8e55b1f1847c2.webp" /></p>
+<p>Ilustración 6 Visualización de la temperatura en el monitor serial</p>
+<p>Como habéis podido comprobar, es muy sencillo y práctico utilizar este sistema. Solo hay que familiarizarse con las funciones específicas de la librería de cada sensor para sacarles el máximo provecho. Os recomendamos que leáis que funciones específicas trae cada librería y juguéis un poco con ellas antes de poneros a programar vuestro proyecto, seguro que encontraréis algunas funciones o ejemplos propios que os simplifican el código bastante.</p>
+<p><img alt="Imagen 6 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/719d38bda8072e0f0316d87605d4832b.webp" /></p>
+<p>Ilustración 7 Montaje para el sensor ds18b20</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -207,16 +207,16 @@
 <p><strong>Programa de testeo: "HELLO WORLD"</strong> </p>
 <p>Para finalizar, probaremos que todo está correctamente instalado y configurado ejecutando nuestro primer programa, el más simple, el típico "HELLO WORLD" ("HOLA MUNDO"). Para ello solo tenéis que pegar el siguiente código en la zona del editor de texto del IDE Arduino:</p>
 <pre><code class="language-c++">void setup() {
-Serial.begin(9600);  // iniciamos el serial
-pinMode(13, OUTPUT);// se declara pin 13 como salida
+    Serial.begin(9600);  // iniciamos el serial
+    pinMode(13, OUTPUT);// se declara pin 13 como salida
 }
 
 void loop() {
-digitalWrite(13, HIGH);  // se enciende el LED
-Serial.println(&quot;HOLA MUNDO&quot;);   // Escribe por el monitor serial
-delay(1000);   // espera 1 segundo
-digitalWrite(13, LOW);   // se apaga el LED
-delay(1000);   // espera 1 segundo
+    digitalWrite(13, HIGH);  // se enciende el LED
+    Serial.println(&quot;HOLA MUNDO&quot;);   // Escribe por el monitor serial
+    delay(1000);   // espera 1 segundo
+    digitalWrite(13, LOW);   // se apaga el LED
+    delay(1000);   // espera 1 segundo
 }
 </code></pre>
 <p>Conectamos la placa Arduino al PC usando el cable USB y hacemos clic en el botón de cargar <img alt="Imagen 13 en Tutorial Arduino: IDE Arduino" src="../img02/830e634504d5ae58711d0fcb0005870a.webp" />.</p>

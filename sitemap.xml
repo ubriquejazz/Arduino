@@ -1,58 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/01_que_es_arduino/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/02_ide_arduino/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/03_ejemplo_semaforo/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/04_salidas/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/05_entradas_analogicas_y_digitales/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/06_entradas_botones/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/07_comunicacion_serie/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/08_sonidos/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/09_medicion_temperatura_ds18b20/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
-         <lastmod>2022-01-14</lastmod>
+         <loc>https://ubriquejazz.github.io/10_pantalla_lcd/</loc>
+         <lastmod>2022-10-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ubriquejazz.github.io/11_xbee_modules/</loc>
+         <lastmod>2022-10-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ubriquejazz.github.io/about/</loc>
+         <lastmod>2022-10-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

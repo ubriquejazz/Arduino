@@ -1,190 +1,163 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>2. El IDE de Arduino - Arduino</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "2. El IDE de Arduino";
-    var mkdocs_page_input_path = "02_ide_arduino.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ubriquejazz.github.io/02_ide_arduino/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>IDE Arduino - Arduino</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IDE Arduino";
+        var mkdocs_page_input_path = "02_ide_arduino.md";
+        var mkdocs_page_url = "/02_ide_arduino/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Arduino</a>
-        <div role="search">
+          <a href=".." class="icon icon-home"> Arduino
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">1. ¿Qué es Arduino?</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">2. El IDE de Arduino</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">Que es Arduino</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">IDE Arduino</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#que-es-y-para-que-sirve">¿Qué es y para qué sirve?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#descarga-e-instalacion">Descarga e instalación</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entorno-de-programacion-y-configuracion">Entorno de programación y configuración</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programa-hello-world">Programa "Hello World!"</a>
+    </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">3. Ejemplo.- Semáforo</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">4. Salidas</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">5. Entradas analógicas y digitales</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">6. Entradas.- Botones</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">7. Comunicación serie</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">8. Sonidos</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../09_medicion_temperatura_ds18b20/">9. Medición de temperatura.- ds18b20</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">10. Pantalla LCD</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">Ejemplo LEDs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">Pines de salida</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">Pines de entrada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">Boton e interruptor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">Comunicacion serie</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">Pantalla LCD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">------</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_xbee_modules/">XBee Modules</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">Sonidos con Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_medicion_temperatura_ds18b20/">Onewire sensor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Arduino</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Arduino</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>2. El IDE de Arduino</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>IDE Arduino</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
-                <h2 id="que-es-y-para-que-sirve">¿Qué es y para qué sirve?</h2>
+                <h1 id="integrated-development-environment-ide">Integrated Development Environment (IDE)</h1>
+<h2 id="que-es-y-para-que-sirve">¿Qué es y para qué sirve?</h2>
 <p>Dado que el Arduino es como un pequeño ordenador que ejecuta una serie de códigos que previamente le hemos introducido, necesitaremos un programa para poder meter estos códigos a la propia placa. Este programa se llama IDE, que significa "Integrated Development Environment" ("Entorno de Desarrollo Integrado"). Este IDE estará instalado en nuestro PC, es un entorno muy sencillo de usar y en él escribiremos el programa que queramos que el Arduino ejecute. Una vez escrito, lo cargaremos a través del USB y Arduino comenzará a trabajar de forma autónoma.</p>
-<p><img alt="Imagen 0 en Tutorial Arduino: IDE Arduino" src="../img02/c90f94b7e332d0b35c8e9099eee3ee66.webp" /></p>
 <h2 id="descarga-e-instalacion">Descarga e instalación</h2>
 <p>Para instalar este IDE en vuestro sistema operativo solo tendréis que seguir unos sencillos pasos:</p>
-<ol>
-<li>Descargar el programa gratuito "Arduino IDE" de su propia página web. Podéis hacer clic en este enlace o dirigíos en la web de Arduino a la sección <a href="https://www.arduino.cc/en/Main/Software">de descargas</a>.</li>
-</ol>
-<p><img alt="Imagen 1 en Tutorial Arduino: IDE Arduino" src="../img02/e9b14b1791df51f87ee9a3fcd6ab1a79.webp" /></p>
-<ol>
+<ul>
+<li>
+<p>Descargar el programa gratuito "Arduino IDE" de su propia página web. Podéis hacer clic en este enlace o dirigíos en la web de Arduino a la sección <a href="https://www.arduino.cc/en/Main/Software">de descargas</a>.</p>
+</li>
 <li>
 <p>Hacéis clic en vuestro sistema operativo, después en guardar archivo y lo descargáis.</p>
 </li>
-<li>
-<p>Instalación en Windows: (si vuestro sistema operativo es Linux podéis saltar al siguiente punto)</p>
-</li>
-</ol>
-<p>Una vez descargado lo ejecutáis y podréis ver la siguiente ventana.</p>
-<p><img alt="Imagen 2 en Tutorial Arduino: IDE Arduino" src="../img02/b9784ceaa91a1d63790c7928e2bdf4e5.webp" /></p>
-<p>Ilustración 3 Aceptación de condiciones.</p>
-<p>​    </p>
+</ul>
+<p><img alt="Imagen 1 en Tutorial Arduino: IDE Arduino" src="../img02/e9b14b1791df51f87ee9a3fcd6ab1a79.webp" />
+Ilustración 2</p>
+<ul>
+<li>Una vez descargado lo ejecutáis y podréis ver la siguiente ventana.</li>
+</ul>
+<p><img alt="Imagen 2 en Tutorial Arduino: IDE Arduino" src="../img02/b9784ceaa91a1d63790c7928e2bdf4e5.webp" />
+Ilustración 3 Aceptación de condiciones.</p>
 <p>Pulsamos en "I Agree". En este cuadro dejamos todas las opciones marcadas, pero hay que prestar especial atención a la opción de instalar los USB driver, ya que esto es muy importante para que la placa Arduino se pueda comunicar con el PC. Pulsamos en Next e Install.</p>
-<p><img alt="Imagen 3 en Tutorial Arduino: IDE Arduino" src="../img02/9a0220ad7a820c311fc8ef130237c5b5.webp" /></p>
-<p>Ilustración 4 Selección de opciones de instalación.</p>
-<p><img alt="Imagen 4 en Tutorial Arduino: IDE Arduino" src="../img02/0cf98dfddb152c16fe4eb8b282dd610d.webp" /></p>
-<p>Ilustración 5 Selección de carpeta de instalación.</p>
-<p>​    </p>
+<p><img alt="Imagen 3 en Tutorial Arduino: IDE Arduino" src="../img02/9a0220ad7a820c311fc8ef130237c5b5.webp" />
+Ilustración 4 Selección de opciones de instalación.</p>
+<p><img alt="Imagen 4 en Tutorial Arduino: IDE Arduino" src="../img02/0cf98dfddb152c16fe4eb8b282dd610d.webp" />
+Ilustración 5 Selección de carpeta de instalación.</p>
 <p>Y esperaremos que termine de instalar (si pregunta si deseamos instalar el software Arduino USB le damos a instalar).</p>
-<p>Ilustración 6 Proceso de instalación.</p>
-<p><img alt="Imagen 5 en Tutorial Arduino: IDE Arduino" src="../img02/d73913f9ed06201a2659bbcaf3a36639.webp" /></p>
+<p><img alt="Imagen 5 en Tutorial Arduino: IDE Arduino" src="../img02/d73913f9ed06201a2659bbcaf3a36639.webp" />
+Ilustración 6 Proceso de instalación.</p>
 <p>Una vez terminado el proceso, hacemos clic en Close y ya tendremos el IDE instalado en nuestro PC.</p>
-<ol>
-<li>Instalación en Linux</li>
-</ol>
-<p>Hay dos formas de hacerlo:</p>
-<ul>
-<li><strong>A.</strong> En distribuciones como Ubuntu y derivados (Lubuntu, Linux Mint...) se puede instalar desde los repositorios al menos desde la versión de Ubuntu 14.04 (17 para Linux Mint) estando disponible Arduino-1.0.5. Para instalar, abrimos el Gestor de paquetes Synaptic o el Centro de Software y buscamos Arduino</li>
-</ul>
-<p><img alt="Imagen 6 en Tutorial Arduino: IDE Arduino" src="../img02/265620d1cb7450953e84cb9100abd81f.webp" /></p>
-<p>Ilustración 7 Gestor de software de Linux Mint</p>
-<p>Pulsamos instalar y empezará el proceso de descarga e instalación.</p>
-<p>Si aún tienes más suerte y cuentas con Arch como distribución de linux o con una de sus derivadas (Arcolinux, Manajaro...) bastará con que ejecutes en la línea de comandos:</p>
-<pre><code>$ yay -S arduino
-</code></pre>
-<p>y se realizará el proceso de instalación del IDE.</p>
-<ul>
-<li><strong>B.</strong> Descargando e instalando el paquete desde la web de Arduino.</li>
-</ul>
-<p><img alt="Imagen 7 en Tutorial Arduino: IDE Arduino" src="../img02/3ce933c1bd5579f6a7f461d8c51592d.webp" /></p>
-<p>Ilustración 8 Apartado de descargas de Arduino</p>
-<p>Descargamos la versión 32 o 64 bits dependiendo del sistema operativo. Después abrimos terminal y nos vamos a la carpeta donde lo hemos descargado. En nuestro caso lo descargamos en el Escritorio así que usamos el comando "cd Escritorio".</p>
-<p><img alt="Imagen 8 en Tutorial Arduino: IDE Arduino" src="../img02/bb2312d5b75697cf8e14a61b97c82965.webp" /></p>
-<p>Ilustración 9 Cambiando el directorio de trabajo</p>
-<p>Una vez que estemos en la carpeta donde lo hemos descargado, escribimos el comando "tar -zxvf arduino-1.0.6-linux32.tgz". <em>(En general es "tar -zxvf nombrearchivo.tgz")</em></p>
-<p><img alt="Imagen 9 en Tutorial Arduino: IDE Arduino" src="../img02/5dee494d38b14e31ca2627f668a5de2c.webp" /></p>
-<p>Ilustración 10 Cambiando el directorio de trabajo 2</p>
-<p>Después de pulsar intro, empieza la instalación que dura pocos segundos. Al finalizar podemos comprobar que se ha creado un directorio llamado arduino1.0.6 (o versión descargada). Entramos y tenemos un ejecutable llamado "arduino"</p>
-<p><img alt="Imagen 10 en Tutorial Arduino: IDE Arduino" src="../img02/17f914fc107f464f798bfe72862c7d13.webp" /></p>
-<p>Ilustración 11 Captura explorador de archivos</p>
-<p>Hacemos doble clic en ese archivo y, en la ventana que se abre, pulsamos "Ejecutar".</p>
-<p><strong>Entorno de programación y configuración</strong> </p>
+<h2 id="entorno-de-programacion-y-configuracion">Entorno de programación y configuración</h2>
 <p>Al abrir el programa veremos cómo nos aparece la consola principal del IDE Arduino en la cual podemos ver las siguientes zonas:</p>
-<p><img alt="Imagen 11 en Tutorial Arduino: IDE Arduino" src="../img02/b27b4317cc466a1379ff86200fdc7ddc.webp" /></p>
-<p>Ilustración 12 Zonas del IDE Arduino</p>
+<p><img alt="Imagen 11 en Tutorial Arduino: IDE Arduino" src="../img02/b27b4317cc466a1379ff86200fdc7ddc.webp" />
+Ilustración 12 Zonas del IDE Arduino</p>
 <p>En la parte de menú tenemos una zona para acceder a funciones como carga de archivos, edición del texto del código, carga de librerías y ejemplos, configuración, herramientas…etc.</p>
 <p>En los botones de acceso rápido tenemos los siguientes iconos:</p>
 <ul>
@@ -195,58 +168,52 @@
 <li><img alt="Imagen 16 en Tutorial Arduino: IDE Arduino" src="../img02/dcc0460dc9a231fe39d94b49698444a1.webp" />Guarda el programa en el disco duro del ordenador.</li>
 <li><img alt="Imagen 17 en Tutorial Arduino: IDE Arduino" src="../img02/3477df948417bfdaf8c454ca999a40a8.webp" />(En la parte derecha de la barra de herramientas se encuentra el Monitor Serial) abre una ventana de comunicación con la placa Arduino en la que podemos ver las respuestas que nuestro Arduino nos está dando, siempre que tengamos el USB conectado.</li>
 </ul>
-<p>En el cuadro del editor de texto escribiremos el código del programa que queramos que Arduino ejecute.</p>
+<p>En el cuadro del editor de texto escribiremos el código del programa que queramos que Arduino ejecute.      </p>
 <p>Finalmente, en el área de mensajes y la consola Arduino nos irá dando información sobre si la consola está compilando, cargando…y sobre los fallos o errores que se produzcan tanto en el código como en el propio IDE.</p>
 <p>El siguiente paso que realizaremos será configurar nuestro IDE para que se comunique con nuestra placa Arduino. Para ello conectaremos nuestro Arduino mediante el cable USB al PC y después de que el sistema operativo haya reconocido e instalado la tarjeta automáticamente, nos dirigimos a la zona de <em>menú</em> , pulsamos en <em>Herramientas</em> y después en <em>Tarjeta</em> . Ahí seleccionamos el modelo de tarjeta Arduino que tengamos, en nuestro caso "Arduino Uno".</p>
-<p><img alt="Imagen 18 en Tutorial Arduino: IDE Arduino" src="../img02/ac626fa3944a063e4eef5993a6d3e213.webp" /></p>
-<p>Ilustración 13 Selección de Tarjeta</p>
+<p><img alt="Imagen 18 en Tutorial Arduino: IDE Arduino" src="../img02/ac626fa3944a063e4eef5993a6d3e213.webp" />
+Ilustración 13 Selección de Tarjeta</p>
 <p>Después vamos a la opción <em>Puerto Serial y elegimos el COM en el que tenemos conectado nuestro Arduino.</em></p>
-<p><img alt="Imagen 19 en Tutorial Arduino: IDE Arduino" src="../img02/e074b23810c2c0ce7cbaf2d7292508fc.webp" /></p>
-<p>Ilustración 14 Selección de puerto COM</p>
+<p><img alt="Imagen 19 en Tutorial Arduino: IDE Arduino" src="../img02/e074b23810c2c0ce7cbaf2d7292508fc.webp" />
+Ilustración 14 Selección de puerto COM</p>
 <p>Si nos aparecieran varios COM activos, porque estemos usando otros dispositivos serial o por otro motivo, para saber cuál de ellos es el que se comunica con nuestra placa, solo tenemos que irnos a <em>Panel de control/Hardware/Administrador de dispositivos.</em> Miramos la pestaña <em>(Puertos COM y LPT)</em> y ahí nos aparecerá nuestro Arduino y el COM en el que está conectado. Con esto, ya podemos empezar a programar nuestro Arduino.</p>
-<p><strong>Programa de testeo: "HELLO WORLD"</strong> </p>
-<p>Para finalizar, probaremos que todo está correctamente instalado y configurado ejecutando nuestro primer programa, el más simple, el típico "HELLO WORLD" ("HOLA MUNDO"). Para ello solo tenéis que pegar el siguiente código en la zona del editor de texto del IDE Arduino:</p>
-<pre><code class="language-c++">void setup() {
-    Serial.begin(9600);  // iniciamos el serial
-    pinMode(13, OUTPUT);// se declara pin 13 como salida
-}
+<h2 id="programa-hello-world">Programa "Hello World!"</h2>
+<p>Para finalizar, probaremos que todo está correctamente instalado y configurado ejecutando nuestro primer programa, el más simple, el típico "Hello World". Para ello solo tenéis que pegar el siguiente código en la zona del editor de texto del IDE Arduino:</p>
+<pre><code> ```c++
+ void setup() {
+ Serial.begin(9600);          // iniciamos el serial
+ pinMode(13, OUTPUT);          // se declara pin 13 como salida
+ }
 
-void loop() {
-    digitalWrite(13, HIGH);  // se enciende el LED
-    Serial.println(&quot;HOLA MUNDO&quot;);   // Escribe por el monitor serial
-    delay(1000);   // espera 1 segundo
-    digitalWrite(13, LOW);   // se apaga el LED
-    delay(1000);   // espera 1 segundo
-}
+ void loop() {
+ digitalWrite(13, HIGH);       // se enciende el LED
+ Serial.println("HOLA MUNDO");   // Escribe por el monitor serial
+ delay(1000);                  // espera 1 segundo
+ digitalWrite(13, LOW);        // se apaga el LED
+ delay(1000);                  // espera 1 segundo
+ }
+ ```
 </code></pre>
 <p>Conectamos la placa Arduino al PC usando el cable USB y hacemos clic en el botón de cargar <img alt="Imagen 13 en Tutorial Arduino: IDE Arduino" src="../img02/830e634504d5ae58711d0fcb0005870a.webp" />.</p>
 <p>Si habéis seguido todo correctamente, podréis ver cómo el led de vuestro Arduino parpadea y si clicáis en el botón del monitor serial<img alt="Imagen 17 en Tutorial Arduino: IDE Arduino" src="../img02/3477df948417bfdaf8c454ca999a40a8.webp" />veréis como Arduino os está escribiendo "HOLA MUNDO".</p>
 <p>Espero que os haya resultado fácil. En el próximo post veremos la estructura de un programa, las sentencias más comunes y realizareis vuestro primer ejemplo práctico.</p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../03_ejemplo_semaforo/" class="btn btn-neutral float-right" title="3. Ejemplo.- Semáforo">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../01_que_es_arduino/" class="btn btn-neutral" title="1. ¿Qué es Arduino?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01_que_es_arduino/" class="btn btn-neutral float-left" title="Que es Arduino"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03_ejemplo_semaforo/" class="btn btn-neutral float-right" title="Ejemplo LEDs">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -254,7 +221,7 @@ void loop() {
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     

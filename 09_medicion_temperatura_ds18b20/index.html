@@ -1,135 +1,131 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>9. Medición de temperatura.- ds18b20 - Arduino</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "9. Medici\u00f3n de temperatura.- ds18b20";
-    var mkdocs_page_input_path = "09_medicion_temperatura_ds18b20.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ubriquejazz.github.io/09_medicion_temperatura_ds18b20/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Onewire sensor - Arduino</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Onewire sensor";
+        var mkdocs_page_input_path = "09_medicion_temperatura_ds18b20.md";
+        var mkdocs_page_url = "/09_medicion_temperatura_ds18b20/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Arduino</a>
-        <div role="search">
+          <a href=".." class="icon icon-home"> Arduino
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">1. ¿Qué es Arduino?</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">2. El IDE de Arduino</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">3. Ejemplo.- Semáforo</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">4. Salidas</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">5. Entradas analógicas y digitales</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">6. Entradas.- Botones</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">7. Comunicación serie</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">8. Sonidos</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">9. Medición de temperatura.- ds18b20</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">Que es Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">IDE Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">Ejemplo LEDs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">Pines de salida</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">Pines de entrada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">Boton e interruptor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">Comunicacion serie</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">Pantalla LCD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">------</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_xbee_modules/">XBee Modules</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">Sonidos con Arduino</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Onewire sensor</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#como-usar-las-librerias-y-los-ejemplos">¿Cómo usar las librerías y los ejemplos?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#ejemplo-medicion-de-temperatura-con-sensor-ds18b20">Ejemplo: Medición de temperatura con sensor ds18b20</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">10. Pantalla LCD</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Arduino</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Arduino</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>9. Medición de temperatura.- ds18b20</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Onewire sensor</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
-                <h2 id="que-es-el-sistema-onewire">¿Qué es el sistema OneWire?</h2>
-<p>En este post, realizaremos un ejemplo de medición de temperatura con el sensor <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">ds18b20</a>. Este sensor, aparte de tener una buena precisión y una versión sumergible, funciona utilizando un sistema de conexionado muy particular. Este sistema se denomina <strong>OneWire</strong> . Con él conseguimos enviar y recibir datos por un único cable. Esto tiene sus ventajas e inconvenientes, pero no deja de ser una opción muy a tener en cuenta cuando vamos justos de conexiones de control para nuestro proyecto, ya que nos ahorramos un cable en cada sensor.
-En otro ejemplo, ya realizamos mediciones de temperatura con un sensor. Lo interesante de este ejemplo no es el medir la temperatura, si no aprender el funcionamiento del sistema OneWire, para poder usarlo en cualquier sensor que lo utilice, y la instalación e importado de librerías de terceros.
+                <h1 id="onewire">OneWire</h1>
+<p>En este post, realizaremos un ejemplo de medición de temperatura con el sensor <a href="https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">ds18b20</a>. Este sensor, aparte de tener una buena precisión y una versión sumergible, funciona utilizando un sistema de conexionado muy particular. Este sistema se denomina <strong>OneWire</strong> . Con él conseguimos enviar y recibir datos por un único cable. Esto tiene sus ventajas e inconvenientes, pero no deja de ser una opción muy a tener en cuenta cuando vamos justos de conexiones de control para nuestro proyecto, ya que nos ahorramos un cable en cada sensor.</p>
+<p>En otro ejemplo, ya realizamos mediciones de temperatura con un sensor. Lo interesante de este ejemplo no es el medir la temperatura, si no aprender el funcionamiento del sistema OneWire, para poder usarlo en cualquier sensor que lo utilice, y la instalación e importado de librerías de terceros.
 Existen muchos detractores de este sistema, que ponen de manifiesto que el usarlo exige unos códigos algo complicados…y que el conexionado no es demasiado intuitivo… La verdad es que ni son tan complicados los códigos, ya que las librerías propias y los ejemplos que traen estos sensores son una buena herramienta, ni es tan complicada su conexión, solo hay que seguir el esquema que os daremos posteriormente. Como veréis en Internet, la mayoría de errores y problemas de las personas que los usan radican en un mal conexionado.</p>
-<h3 id="como-usar-las-librerias-y-los-ejemplos"><strong>¿Cómo usar las librerías y los ejemplos?</strong></h3>
+<h2 id="como-usar-las-librerias-y-los-ejemplos"><strong>¿Cómo usar las librerías y los ejemplos?</strong></h2>
 <p>Esta vez, usaremos unas librerías en nuestro proyecto para controlar el sensor térmico con el sistema OneWire que os hemos comentado. En nuestro post 3, os definimos qué eran las librerías y ahora os explicaremos como usarlas. Arduino tiene una serie de librerías genéricas que podemos usar simplemente escribiendo al principio de nuestro código la sentencia <strong>#include &lt;</strong> <em>librería</em> <strong>.h&gt;</strong> repitiendo con todas las librerías que necesitemos.</p>
 <p><img alt="Imagen 0 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/210c1310590cae7e913f1c2b228c4849.webp" />
 Ilustración 1 Importación de librerías en IDE Arduino</p>
@@ -143,13 +139,15 @@ Ilustración 3 Ejemplo de carpeta de librería instalada</p>
 <p>Una vez instaladas las librerías que vayamos a usar, podremos usar los ejemplos que traen cada una para probar sus accesorios. Es interesante echarles un ojo antes de ponernos a programar como locos, porque de estos ejemplos podemos aprovechar partes de código o ver cómo usa las funciones… y así ahorrarnos mucho trabajo. Para abrir estos ejemplos solo tendremos que dirigirnos dentro del IDE a <strong>Archivo-&gt;Ejemplos</strong> y ahí veremos todas las librerías disponibles y dentro de cada una, sus ejemplos correspondientes.</p>
 <p><img alt="Imagen 3 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/3057e4c815790ab8b9a258723d6bb44a.webp" />
 Ilustración 4 Cargar ejemplos</p>
-<h3 id="ejemplo-medicion-de-temperatura-con-sensor-ds18b20">Ejemplo: Medición de temperatura con sensor ds18b20</h3>
+<h2 id="ejemplo-medicion-de-temperatura-con-sensor-ds18b20">Ejemplo: Medición de temperatura con sensor ds18b20</h2>
 <p>Para empezar con este ejemplo detallaremos el material necesario.</p>
-<p>•   1 x Arduino UNO R3
-•   1 x Protoboard
-•   1 x Sensor de Temperatura ds18b20 (versión sumergible)
-•   1 x Resistencia de 4,7kΩ
-•   Cables para conectar todo</p>
+<ul>
+<li>1 x Arduino UNO R3</li>
+<li>1 x Protoboard</li>
+<li>1 x Sensor de Temperatura ds18b20 (versión sumergible)</li>
+<li>1 x Resistencia de 4,7kΩ</li>
+<li>Cables para conectar todo</li>
+</ul>
 <p>En esta ocasión, es muy importante que prestéis atención al montaje del circuito. No es para nada difícil, pero si no está correcto el sensor dará medidas erróneas o incluso puede estropearse. El esquema es el siguiente:</p>
 <p><img alt="Imagen 4 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/1aff72f5694049f113c88d7c9a6a9546.webp" />
 Ilustración 5 Montaje para el sensor ds18b20</p>
@@ -175,56 +173,45 @@ DallasTemperature sensors(&amp;ourWire); //Se llama a la librería DallasTempera
 //** Programa **//
 
 void setup() {
-delay(1000);
-Serial.begin(9600);
-sensors.begin();                     //Se inician los sensores
+    delay(1000);
+    Serial.begin(9600);
+    sensors.begin(); //Se inician los sensores
 }
 
 void loop() {
-sensors.requestTemperatures();       //Prepara el sensor para la lectura
-
-Serial.print(sensors.getTempCByIndex(0)); //Se lee e imprime la temperatura en grados Centigrados
-Serial.println(&quot; Grados Centigrados&quot;);
-
-delay(1000);                         //Se provoca una parada de 1 segundo antes de la próxima lectura
+    sensors.requestTemperatures();              //Prepara el sensor para la lectura
+    Serial.print(sensors.getTempCByIndex(0));   //Se lee e imprime la temperatura en grados Centigrados
+    Serial.println(&quot; Grados Centigrados&quot;);
+    delay(1000);    //Se provoca una parada de 1 segundo antes de la próxima lectura
 
 }
 </code></pre>
-<p>(Panama hiteck)</p>
 <p>En el programa, simplemente comenzaremos importando las librerías, OneWire y DallasTemperature, de la forma que comentábamos más arriba. Continuaremos definiendo el pin que utilizaremos como bus de datos. Para ello usaremos la sentencia <em>#define</em> , la cual nos permite crear un valor constante pero con la ventaja de no consumir la RAM que usaría, al compilar, la creación de una variable. Hay que tener la precaución de escribir correctamente las definiciones por que pueden provocar el lastrado de errores a lo largo de todo el código si no se hace bien. En nuestro caso asignaremos el <strong>pin 2</strong> para el bus.
 Con la línea <em>OneWire ourWire(Pin)</em> , le decimos al sensor a través de que pin se debe comunicar con Arduino y con <em>DallasTemperature sensors(&amp;ourWire)</em> llamaremos a la librería de Dallas para que interprete los datos enviados y recibidos por nuestro bus.
 Seguidamente, en nuestra función de setup, iniciaremos la comunicación serial a 9600 bits/seg y con la sentencia <em>sensors.begin()</em> activaremos los sensores que estemos usando.
 Nuestro código en bucle, lo que hará será primero preparar al sensor ds18b20 para medir, usando la función <em>sensors.requestTemperatures()</em> y con la línea <em>Serial.print(sensors.getTempCByIndex(0))</em> tomará la medida y la imprimirá, por el monitor serial y en grados centígrados, en una única sentencia. Finalmente añadiremos la impresión del texto “ <em>Grados Centígrados</em> ” y haremos una pausa de 1 segundo para que el sensor no esté realizando miles de medidas constantemente.</p>
-<p><img alt="Imagen 5 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/dd1602c31745e30d09c8e55b1f1847c2.webp" /></p>
-<p>Ilustración 6 Visualización de la temperatura en el monitor serial</p>
+<p><img alt="Imagen 5 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/dd1602c31745e30d09c8e55b1f1847c2.webp" />
+Ilustración 6 Visualización de la temperatura en el monitor serial</p>
 <p>Como habéis podido comprobar, es muy sencillo y práctico utilizar este sistema. Solo hay que familiarizarse con las funciones específicas de la librería de cada sensor para sacarles el máximo provecho. Os recomendamos que leáis que funciones específicas trae cada librería y juguéis un poco con ellas antes de poneros a programar vuestro proyecto, seguro que encontraréis algunas funciones o ejemplos propios que os simplifican el código bastante.</p>
-<p><img alt="Imagen 6 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/719d38bda8072e0f0316d87605d4832b.webp" /></p>
-<p>Ilustración 7 Montaje para el sensor ds18b20</p>
+<p><img alt="Imagen 6 en Tutorial Arduino: Uso de sistema OneWire" src="../img09/719d38bda8072e0f0316d87605d4832b.webp" />
+Ilustración 7 Montaje para el sensor ds18b20</p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../10_pantalla_lcd/" class="btn btn-neutral float-right" title="10. Pantalla LCD">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../08_sonidos/" class="btn btn-neutral" title="8. Sonidos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../08_sonidos/" class="btn btn-neutral float-left" title="Sonidos con Arduino"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -232,14 +219,14 @@ Nuestro código en bucle, lo que hará será primero preparar al sensor ds18b20 
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
       <span><a href="../08_sonidos/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../10_pantalla_lcd/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

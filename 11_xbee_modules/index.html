@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ubriquejazz.github.io/11_xbee_modules/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>XBee Modules - Arduino</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "XBee Modules";
+        var mkdocs_page_input_path = "11_xbee_modules.md";
+        var mkdocs_page_url = "/11_xbee_modules/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Arduino
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">Que es Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">IDE Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">Ejemplo LEDs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">Pines de salida</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">Pines de entrada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">Boton e interruptor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">Comunicacion serie</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">Pantalla LCD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">------</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">XBee Modules</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-how-to-use-xbee-modules-as-transmitter-receiver-arduino-tutorial">Introduction: How to Use XBee Modules As Transmitter &amp; Receiver - Arduino Tutorial</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-what-you-will-need">Step 1: What You Will Need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-xctu-setup-your-xbee-modules">Step 2: XCTU - Setup Your XBee Modules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-the-code">Step 3: The Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-the-circuit">Step 4: The Circuit</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-5-well-done">Step 5: Well Done!</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">Sonidos con Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_medicion_temperatura_ds18b20/">Onewire sensor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Arduino</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>XBee Modules</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-use-xbee-modules-as-transmitter-receiver-arduino-tutorial">How to use XBee Modules As Transmitter &amp; Receiver - Arduino Tutorial</h1>
+<h2 id="introduction-how-to-use-xbee-modules-as-transmitter-receiver-arduino-tutorial">Introduction: How to Use XBee Modules As Transmitter &amp; Receiver - Arduino Tutorial</h2>
+<p>https://www.instructables.com/How-to-Use-XBee-Modules-As-Transmitter-Receiver-Ar/</p>
+<p><a href="https://content.instructables.com/ORIG/F4R/5U97/ILWLB0CU/F4R5U97ILWLB0CU.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=30aa744f69e574af4aa0e543805f145f"><img alt="How to Use XBee Modules As Transmitter &amp; Receiver - Arduino Tutorial" src="https://content.instructables.com/ORIG/F4R/5U97/ILWLB0CU/F4R5U97ILWLB0CU.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=600&amp;height=1024&amp;fit=bounds&amp;md=30aa744f69e574af4aa0e543805f145f" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/FW8/DF3K/ILWLB0ED/FW8DF3KILWLB0ED.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=f9ce90da9307ce864a7db8b791a26f0c"><img alt="How to Use XBee Modules As Transmitter &amp; Receiver - Arduino Tutorial" src="https://content.instructables.com/ORIG/FW8/DF3K/ILWLB0ED/FW8DF3KILWLB0ED.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=600&amp;height=1024&amp;fit=bounds&amp;md=f9ce90da9307ce864a7db8b791a26f0c" /></a></p>
+<p>In this tutorial we will use two xBee (series 1) modules with the Arduino uno board. We will configure them to act as a receiver and transmitter to control the brightness of an LED wirelessly by using one potentiometer.</p>
+<p>The xBee - series 1 - modules take the 802.15.4 stack (the basis for Zigbee) and wrap it into a simple to use serial command set. These modules allow a very reliable and simple communication between micro controllers, computers or other systems by using just a serial port! They can communicate up to 300 Ft (~100m), they have 2.4GHz frequency , use the 802.15.4 protocol and have data rate up to 250kbps. They have also a 1mW wire antenna on them. They supports Point to point and multi-point networks.</p>
+<p>So, let's get started!</p>
+<h2 id="step-1-what-you-will-need">Step 1: What You Will Need</h2>
+<p><a href="https://content.instructables.com/ORIG/FNS/PEYF/ILWLB0E6/FNSPEYFILWLB0E6.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=285b905902d29fc1102e36f5787e7515"><img alt="What You Will Need" src="https://content.instructables.com/ORIG/FNS/PEYF/ILWLB0E6/FNSPEYFILWLB0E6.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=285b905902d29fc1102e36f5787e7515" /></a></p>
+<p>For this tutorial you will need:</p>
+<ul>
+<li>2x Arduino uno boards</li>
+<li>2x xBee series 1 modules</li>
+<li>2x XBee Explorer Regulated boards</li>
+<li>XBee Explorer USB</li>
+<li>220 Ohm resistor, led</li>
+<li>potentiometer (e.g. 2k)</li>
+<li>2x breadboards</li>
+<li>some breadboard cables</li>
+</ul>
+<h2 id="step-2-xctu-setup-your-xbee-modules">Step 2: XCTU - Setup Your XBee Modules</h2>
+<p><a href="https://content.instructables.com/ORIG/FKV/GAOA/ILWLB0CR/FKVGAOAILWLB0CR.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=01c1ddafc946e27cf136ee02ceccd10f"><img alt="XCTU - Setup Your XBee Modules" src="https://content.instructables.com/ORIG/FKV/GAOA/ILWLB0CR/FKVGAOAILWLB0CR.png?auto=webp&amp;frame=1&amp;width=899&amp;fit=bounds&amp;md=01c1ddafc946e27cf136ee02ceccd10f" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/FDL/VOR6/ILWLB0CQ/FDLVOR6ILWLB0CQ.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=c7052441572191db217b730d1d1abee7"><img alt="XCTU - Setup Your XBee Modules" src="https://content.instructables.com/ORIG/FDL/VOR6/ILWLB0CQ/FDLVOR6ILWLB0CQ.png?auto=webp&amp;frame=1&amp;width=301&amp;fit=bounds&amp;md=c7052441572191db217b730d1d1abee7" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/FM6/C1SX/ILWLB0E1/FM6C1SXILWLB0E1.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=9b4f6a93cc3db41fd3a818aad846207f"><img alt="XCTU - Setup Your XBee Modules" src="https://content.instructables.com/ORIG/FM6/C1SX/ILWLB0E1/FM6C1SXILWLB0E1.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=301&amp;height=1024&amp;fit=bounds&amp;md=9b4f6a93cc3db41fd3a818aad846207f" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/F9L/I3ER/ILWLB89D/F9LI3ERILWLB89D.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=40384b15f301216e925b7b85756f55c5"><img alt="XCTU - Setup Your XBee Modules" src="https://content.instructables.com/ORIG/F9L/I3ER/ILWLB89D/F9LI3ERILWLB89D.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=301&amp;height=1024&amp;fit=bounds&amp;md=40384b15f301216e925b7b85756f55c5" /></a></p>
+<p>Download the XCTU software from <a href="http://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu">here</a>.</p>
+<p>Run the program and connect the XBee Explorer USB board with your computer. Click on the "Discover devices" icon to add your xBee in the XCTU software. </p>
+<p>Now click on it (first image above) and set the CH field to e.g. "C" and the ID field to e.g. "1001". These values must be the same to all xBee modules to communicate with each other. Now as this xBee will be our transmitter, set the CE field as "Coordinator". If the baud rate isn't set to 9600bps, change it to this value.</p>
+<p>Now click the "Write" button to save the changes in your xBee module.</p>
+<p>Disconnect the xBee explorer board from your computer and connect the other xBee module on it. </p>
+<p>Connect the explorer board with your computer again and follow the same procedure (second image above) but this time set the CE field as "End device". </p>
+<p>Finally the configuration for our xBees must be:</p>
+<p>For xBee transmitter:</p>
+<ul>
+<li>CH: C</li>
+<li>ID: 1001</li>
+<li>CE: Coordinator</li>
+<li>Baud rate: 9600 bps</li>
+</ul>
+<p>For xBee receiver:</p>
+<ul>
+<li>CH: C</li>
+<li>ID: 1001</li>
+<li>CE: End point</li>
+<li>Baund rate: 9600 bps</li>
+</ul>
+<h2 id="step-3-the-code">Step 3: The Code</h2>
+<p>Here's the "xBee Transmitter" code, embedded using Codebender! Try downloading the Codebender <a href="https://codebender.cc/static/walkthrough/page/1">plugin </a>and clicking on the "Run on Arduino" button to program your Arduino board with this sketch. And that's it, you've programmed your Arduino uno board with this sketch!</p>
+<p>And here's the "xbee Receiver" code, connect the second Arduino uno board with your computer and press the "Run on Arduino " button.</p>
+<h2 id="step-4-the-circuit">Step 4: The Circuit</h2>
+<p><a href="https://content.instructables.com/ORIG/FOX/KKGD/ILWLB657/FOXKKGDILWLB657.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=e3c5d2fdd6f35809a2a64b6dcee66eae"><img alt="The Circuit" src="https://content.instructables.com/ORIG/FOX/KKGD/ILWLB657/FOXKKGDILWLB657.png?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=900&amp;fit=bounds&amp;md=e3c5d2fdd6f35809a2a64b6dcee66eae" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/FVW/VSO5/ILWLB64Q/FVWVSO5ILWLB64Q.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=34c0d3f0d396023877f7bc41a27e70ce"><img alt="The Circuit" src="https://content.instructables.com/ORIG/FVW/VSO5/ILWLB64Q/FVWVSO5ILWLB64Q.png?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=300&amp;fit=bounds&amp;md=34c0d3f0d396023877f7bc41a27e70ce" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/F4D/F0BZ/ILWLB0E7/F4DF0BZILWLB0E7.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=4a9eb5737bebd30c850c52632283252b"><img alt="The Circuit" src="https://content.instructables.com/ORIG/F4D/F0BZ/ILWLB0E7/F4DF0BZILWLB0E7.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=300&amp;height=1024&amp;fit=bounds&amp;md=4a9eb5737bebd30c850c52632283252b" /></a></p>
+<p><a href="https://content.instructables.com/ORIG/F18/N7S2/ILWLB0E9/F18N7S2ILWLB0E9.jpg?auto=webp&amp;frame=1&amp;width=1024&amp;height=1024&amp;fit=bounds&amp;md=ccaaa8e103d4c2c5f3d1db0fefdac2b1"><img alt="The Circuit" src="https://content.instructables.com/ORIG/F18/N7S2/ILWLB0E9/F18N7S2ILWLB0E9.jpg?auto=webp&amp;frame=1&amp;crop=3:2&amp;width=300&amp;height=1024&amp;fit=bounds&amp;md=ccaaa8e103d4c2c5f3d1db0fefdac2b1" /></a></p>
+<p>The connections are pretty easy, see the above image with the breadboard circuit schematics. Power on both Arduino uno boards and try to fade the led by turning the potentiometer. </p>
+<h2 id="step-5-well-done">Step 5: Well Done!</h2>
+<p><a href="https://content.instructables.com/ORIG/FHQ/1YLR/ILWLB71O/FHQ1YLRILWLB71O.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=8020ddc0a76893e7d3836d6001aebf04"><img alt="Well Done!" src="https://content.instructables.com/ORIG/FHQ/1YLR/ILWLB71O/FHQ1YLRILWLB71O.png?auto=webp&amp;frame=1&amp;width=1024&amp;fit=bounds&amp;md=8020ddc0a76893e7d3836d6001aebf04" /></a></p>
+<p>You have successfully completed one more "How to" tutorial and you learned how to fade an LED wirelessly by using the xBee S1 modules. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="------"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../08_sonidos/" class="btn btn-neutral float-right" title="Sonidos con Arduino">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../08_sonidos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,74 +1,70 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>6. Entradas.- Botones - Arduino</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "6. Entradas.- Botones";
-    var mkdocs_page_input_path = "06_entradas_botones.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ubriquejazz.github.io/06_entradas_botones/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Boton e interruptor - Arduino</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Boton e interruptor";
+        var mkdocs_page_input_path = "06_entradas_botones.md";
+        var mkdocs_page_url = "/06_entradas_botones/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Arduino</a>
-        <div role="search">
+          <a href=".." class="icon icon-home"> Arduino
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">1. ¿Qué es Arduino?</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">2. El IDE de Arduino</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">3. Ejemplo.- Semáforo</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">4. Salidas</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">5. Entradas analógicas y digitales</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">6. Entradas.- Botones</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">Que es Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">IDE Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">Ejemplo LEDs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">Pines de salida</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">Pines de entrada</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Boton e interruptor</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#esquema-comun">Esquema común</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#pulsador">Pulsador</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#interruptor">Interruptor</a>
@@ -76,76 +72,80 @@
     <li class="toctree-l2"><a class="reference internal" href="#interruptor-con-correccion-de-rebote">Interruptor con corrección de rebote</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">7. Comunicación serie</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">8. Sonidos</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../09_medicion_temperatura_ds18b20/">9. Medición de temperatura.- ds18b20</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">10. Pantalla LCD</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">Comunicacion serie</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">Pantalla LCD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">------</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11_xbee_modules/">XBee Modules</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_sonidos/">Sonidos con Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09_medicion_temperatura_ds18b20/">Onewire sensor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Arduino</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Arduino</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>6. Entradas.- Botones</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Boton e interruptor</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
-                <h2 id="botones">Botones</h2>
+                <h1 id="boton-e-interruptor">Boton e Interruptor</h1>
 <p>En este post, haremos una extensión del anterior. Nos detendremos en uno de los elementos más básicos en el control de Arduino, pero de los más usados y prácticos, <strong>los botones</strong> . Éstos son un tipo de elemento externo que nos permite controlar físicamente acciones a realizar por nuestro sistema a través de dar continuidad o no a la señal de entrada en la que están instalados. Como podréis imaginar son parte fundamental de casi cualquier proyecto y son muy fáciles de usar y programar, aunque hay que tener en cuenta un par de detalles a la hora de usarlos.
 Para comprender bien cómo funcionan en los distintos casos y cómo solucionar algunos problemillas propios de los botones, realizaremos 3 ejemplos para verlos detalladamente y en los que usaremos el mismo circuito/esquema y solo iremos variando su programación.</p>
-<p>Esquema común</p>
-<p>Para realizar todos los ejemplos necesitaremos los siguientes elementos:
-•   1 x Arduino UNO R3
-•   1 X Protoboard
-•   1 x led (usaremos rojo pero vale cualquier color)
-•   1 x Botón
-•   1x Resistencia de 220Ω (puede valer de 330Ω)
-•   1 x Resistencia de 10kΩ (puede valer de 1 ó 5 kΩ)
-•   Cables para conectar todo
-Con todo comenzaremos a montar nuestro circuito como se describe en el siguiente esquema.</p>
-<p><img alt="Imagen 0 en Tutorial Arduino: Entradas (2): Botones" src="../img06/d1f8e6081f6781c53eb80251cc577937.webp" /></p>
-<p>Ilustración 1 Esquema de montaje del interruptor.</p>
+<h2 id="esquema-comun">Esquema común</h2>
+<p>Para realizar todos los ejemplos necesitaremos los siguientes elementos:</p>
+<ul>
+<li>1 x Arduino UNO R3</li>
+<li>1 X Protoboard</li>
+<li>1 x led (usaremos rojo pero vale cualquier color)</li>
+<li>1 x Botón</li>
+<li>1x Resistencia de 220Ω (puede valer de 330Ω)</li>
+<li>1 x Resistencia de 10kΩ (puede valer de 1 ó 5 kΩ)</li>
+<li>Cables para conectar todo</li>
+</ul>
+<p>Con todo comenzaremos a montar nuestro circuito como se describe en el siguiente esquema.</p>
+<p><img alt="Imagen 0 en Tutorial Arduino: Entradas (2): Botones" src="../img06/d1f8e6081f6781c53eb80251cc577937.webp" />
+<em>Ilustración 1 Esquema de montaje del interruptor.</em></p>
 <p>Usaremos el pin <strong>2</strong> para encender el led y el <strong>4</strong> para saber el estado del botón. Al montarlo debemos tener en cuenta un par de detalles. Primero, que conectemos correctamente la polaridad del led, siguiendo las indicaciones que os dimos en el ejemplo del semáforo. Segundo, que usemos la <strong>resistencia de 10kΩ para conectar el botón a tierra</strong> . Esto es muy importante, ya que con eso protegemos a nuestra placa de crear un cortocircuito a tierra que podría deteriorarla. La resistencia de 220Ω, como en ejemplos anteriores, la usaremos para conectar el led a tierra.</p>
-<p><img alt="Imagen 1 en Tutorial Arduino: Entradas (2): Botones" src="../img06/5838382b7dc0a838b9074ac5516435c4.webp" /></p>
-<p>Ilustración 2 Montaje real para ejemplos de botones e interruptores</p>
-<h3 id="pulsador">Pulsador</h3>
+<p><img alt="Imagen 1 en Tutorial Arduino: Entradas (2): Botones" src="../img06/5838382b7dc0a838b9074ac5516435c4.webp" />
+<em>Ilustración 2 Montaje real para ejemplos de botones e interruptores</em></p>
+<h2 id="pulsador">Pulsador</h2>
 <p>Empezaremos con el botón más sencillo de programar y usar que tenemos, el <strong>pulsador</strong> . Éste nos permite realizar una acción mientras mantengamos pulsado nuestro botón, por ejemplo que un led se quede encendido mientras estemos pulsando.
 Para nuestro programa declararemos una variable llamada “ <strong>pulsador</strong> ” que usaremos para saber si nuestro botón está pulsado o no.</p>
 <pre><code>int pulsador=0;
@@ -194,7 +194,7 @@ void loop() {
   }
 }
 </code></pre>
-<h3 id="interruptor">Interruptor</h3>
+<h2 id="interruptor">Interruptor</h2>
 <p>Con este tipo, podremos usar un botón de la misma manera que si usáramos un <strong>interruptor</strong> de los que conocemos comúnmente. Cuando pulsemos, se realizará la acción programada (encender el led) y se mantendrá en este estado hasta que volvamos a pulsar nuevamente (se apagará el led).
 Para obtener este tipo de botón solo haremos una pequeña modificación del código anterior. Introduciremos una nueva variable llamada “ <strong>estado</strong> ” que almacene el estado en el que se dejó el led tras la última pulsación. De esta forma cuando pulsemos, Arduino se acordará si el led estaba encendido o apagado.</p>
 <pre><code>int estado=0;
@@ -247,7 +247,7 @@ void loop() {
   }
 }
 </code></pre>
-<h3 id="interruptor-con-correccion-de-rebote">Interruptor con corrección de rebote</h3>
+<h2 id="interruptor-con-correccion-de-rebote">Interruptor con corrección de rebote</h2>
 <p>Al realizar el anterior ejemplo de interruptor, podréis daros cuenta que hay algunas veces que nuestro botón falla y no hace correctamente su función. Es imposible predecir su comportamiento. A este efecto se le denomina rebote y es debido a varios motivos. Aquí vamos a dar un par de soluciones rápidas y efectivas que nos pueden ayudar en la mayoría de casos, pero en el módulo de nivel intermedio explicaremos una solución al problema del “ <strong>debounce</strong> ” más elaborada y fiable.
 Uno de los motivos de este efecto, es que Arduino repite nuestro loop de instrucciones miles de veces cada segundo. Esto provoca que cuando pulsamos el botón una sola vez, Arduino leerá cientos de veces seguidas que hemos pulsado e interpretará que hemos pulsado todas esas veces. Por eso, la acción de encender y apagar se repetirá muy rápidamente, sin que lo apreciemos, hasta dejar el led en la última posición leída.
 Solucionar esto es sencillo. Solo tenemos que introducir una nueva variable “ <strong>pulsadorAnt</strong> ” donde almacenemos en qué estado anterior se encontraba el botón, pulsado o no, antes de nuestra pulsación.</p>
@@ -309,29 +309,21 @@ void loop() {
 </code></pre>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../07_comunicacion_serie/" class="btn btn-neutral float-right" title="7. Comunicación serie">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../05_entradas_analogicas_y_digitales/" class="btn btn-neutral" title="5. Entradas analógicas y digitales"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../05_entradas_analogicas_y_digitales/" class="btn btn-neutral float-left" title="Pines de entrada"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../07_comunicacion_serie/" class="btn btn-neutral float-right" title="Comunicacion serie">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -339,7 +331,7 @@ void loop() {
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     

@@ -1,6 +1,4 @@
-Tras realizar este tutorial, puedes profundizar en este tema con el [curso de Arduino](https://openwebinars.net/cursos/arduino/), perfecto para aprender de forma práctica a programar en Arduino desde cero. En este momento puedes acceder a este curso y muchos más de forma gratuita gracias al periodo de prueba de 15 días que ofrecemos en estos momentos.
-
-## Descripción de las entradas
+# Pines de entrada
 
 Nuestro Arduino no sólo puede enviar señales sino que también puede recibirlas con dos propósitos principales como son leer datos de sensores y recibir mensajes de otros dispositivos (shield, otro Arduino, PC, etc.). Las entradas las clasificaremos en analógicas y digitales.
 
@@ -19,8 +17,6 @@ lectura = analogRead(pinentrada);
 “lectura” lo sustituimos por el nombre de la variable donde queramos almacenar el valor leído y en “pinentrada” tendremos que poner el número del pin analógico que hemos elegido (0,1,...5) o el nombre de la variable que almacena dicho número.
 
 Esta función nos devolverá un valor que va de 0 a 1023 en proporción al nivel de la señal de entrada. Para una entrada nula obtendremos el valor 0, para una entrada de 2.5 Voltios 511 (la mitad de 1023) y para 5 Voltios 1023.
-
-
 
 ## Entradas digitales
 
@@ -42,13 +38,11 @@ Para almacenar los dos valores posibles LOW o HIGH en una variable llamada “le
 lectura = digitalRead(pinentrada);
 ```
 
-## Medición de temperatura. Sensor M35
+## Sensor de temperatura LM35
 
 Este sensor de temperatura lo podéis encontrar por **poco más de 1€** . Es un sensor lineal, tiene una precisión de 0.5 ºC y una sensibilidad de 10 mV/ºC. Podéis encontrar más información en su [datasheet](http://www.ti.com/lit/ds/symlink/lm35.pdf) .
 
 ![Imagen 2 en Tutorial Arduino: Entradas Analógicas y Digitales](./img05/718030b2a8bbc2bc1e2694d8899a339f.webp)
-
- 
 
 Vamos a hacer un pequeño proyecto para medir la temperatura ambiente y visualizarla en nuestro PC. Su montaje no lleva más de un par de minutos y podemos verlo claramente en el esquema. La pata +Vs va al pin 5V, la pata Vout al pin que utilicemos para la lectura, en este caso el 0, y la restante GND al pin GND. Tened en cuenta que el dibujo del LM35 está hecho con **vista desde las patas** . CUIDADO con colocarlo al revés porque si lo hacéis mal el sensor se calentará rápidamente y a parte de estropearlo os quemaréis al tocarlo.
 

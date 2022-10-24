@@ -1,4 +1,4 @@
-## ¿Qué es Arduino?
+# ¿Qué es Arduino?
 
 Arduino es una placa controladora y su entorno de programación que permiten de manera **rápida y sencilla** realizar proyectos de electrónica, automatismo, control, domótica, etc. Arduino nació en el Instituto IVREA (Italia) para facilitar a sus alumnos las tareas de programación de microcontroladores. Es ese uno de los motivos de su éxito: cualquier persona con pocos conocimientos de informática y electrónica puede programarlo e implementarlo.
 

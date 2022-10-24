@@ -1,8 +1,8 @@
+# Pantalla LCD
+
 ## Descripción del proyecto
 
 En este último post del primer tutorial veremos cómo mostrar a través de una pantalla LCD la temperatura medida con el sensor LM35 que ya aprendimos a utilizar en el post 5. ¿una pantalla LCD? Sí, pero no la confundamos con la pantalla de nuestra televisión o la de nuestro smartphone, esas son pantallas LCD-TFT,LCD-SPI... nosotros usaremos una LCD simple y a un sólo color del tipo de las que podemos encontrar en calculadoras y algunos electrodomésticos.
-
- 
 
 ## Material necesario
 
@@ -11,8 +11,6 @@ Suponiendo que ya tenemos nuestra placa Arduino Uno, nuestra protoboard y un jue
 - **Pantalla LCD** . En este caso he elegido una de 16 columnas y 2 líneas (16x2) por ser probablemente la más común. En tiendas online las he visto por unos 4 € envío incluido.
 - **Sensor LM35** . Si seguiste el post 5 probablemente ya lo tendrás. Si no tampoco te preocupes porque no valdrá más de 2€ .
 - **Potenciómetro 10k.** Lo necesitamos para ajustar el contraste de a pantalla. Sin él sería ilegible. Cuesta pocos céntimos.
-
- 
 
 ## Montaje
 
@@ -41,11 +39,9 @@ Viendo la foto puede parecer complicado por la cantidad de cables que tiene, per
 
 ![Imagen 1 en Tutorial Arduino: Pantalla LCD](./img10/eef69618e52635525f0f349072d54454.webp)
 
- 
-
 No debemos olvidar que la primera vez que se conecta, tras alimentarla debemos ajustar el potenciómetro hasta encontrar el contraste óptimo. Antes de seguir podemos verificar que funciona perfectamente cargando uno de los códigos de ejemplo de la IDE como el que encontramos en Archivo → Ejemplos → LiquidCrystal → HelloWorld.
 
-Código
+## Código
 
 Sólo vamos a tratar en profundidad la parte del código que tiene que ver con el LCD y no con el sensor ya que está visto anteriormente. Al final del post está el código completo. En primer lugar teneos que añadir la librería para LCD en Esketch → Importar librería → LiquidCrystal o escribiendo
 
@@ -85,8 +81,6 @@ lcd.print(“Temperatura:”);
 
 Suponiendo que ya hemos leído la temperatura y la tenemos almacenada en una variable llamada *temp* falta mostrarla por pantalla. Para que quepa la escribimos en la primera columna de la segunda fila:
 
- 
-
 ```
 lcd.setCursor(0, 1);
 lcd.print(temp);
@@ -94,16 +88,12 @@ lcd.print(temp);
 
 Y con esto escribirá el número que amacena la variable *temp* . Para que nuestro proyecto quede más estético escribiremos la cadena de caracteres “C” en la octava columna de la segunda fila (el símbolo “º” no se muestra correctamente).
 
- 
-
 ```
 lcd.setCursor(7, 1);
 lcd.print(“C”);
 ```
 
 Aunque es este código no vamos a tener problemas al sobrescribir, tenemos que tener en cuenta que sólo se borran las posiciones en las que se escriben, el resto sigue manteniendo los caracteres que mostraban anteriormente. Para limpiar la pantalla utilizaremos la opción clear que borrará toda la pantalla.
-
- 
 
 ```
 lcd.clear();

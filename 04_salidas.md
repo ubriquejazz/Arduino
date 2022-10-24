@@ -1,4 +1,4 @@
-## Pines de salida
+# Pines de salida
 
 Arduino utiliza sus pines de salida para enviar señales eléctricas. Éstas señales pueden utilizarse para alimentar otros dispositivos (led's, zumbadores...) o para comunicarse enviando una serie de pulsos que el receptor debe entender.
 
@@ -7,8 +7,6 @@ Las salidas se dividen en dos niveles o estados: HIGH a 5 V y LOW a 0 V. Por def
 Para valores constantes de 5V, 3.3V y 0V (GND) podemos utilizar los pines correspondientes del apartado “POWER” de nuestro Arduino.
 
 ![Imagen 0 en Tutorial Arduino: Salidas](./img04/0e033beb9d846345961fea79a4543898.webp)
-
- 
 
 ## Configuración y uso de las salidas digitales
 

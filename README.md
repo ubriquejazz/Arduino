@@ -1,21 +1,10 @@
 # Arduino
 
-Copiado de mkdocs.yml
+Page built and deployed with MkDocs
 
-site_name: Arduino
-site_url: https://ubriquejazz.github.io
-nav:
-    - Que es Arduino: 01_que_es_arduino.md
-    - IDE Arduino: 02_ide_arduino.md
-    - Ejemplo LEDs: 03_ejemplo_semaforo.md
-    - Pines de salida: 04_salidas.md
-    - Pines de entrada: 05_entradas_analogicas_y_digitales.md
-    - Boton e interruptor: 06_entradas_botones.md
-    - Comunicacion serie: 07_comunicacion_serie.md
-    - Pantalla LCD: 10_pantalla_lcd.md
-    - ------: about.md
-    - XBee Modules: 11_xbee_modules.md
-    - Sonidos con Arduino: 08_sonidos.md
-    - Onewire sensor: 09_medicion_temperatura_ds18b20.md
-    - About: about.md
-theme: readthedocs
+ `mkdocs serve`
+
+ `mkdocs build`
+
+ `mkdocs gh-deploy --config-file ../hello/mkdocs.yml --remote-branch gh-pages`
+

@@ -10,9 +10,8 @@ nav:
     - Comunicacion serie: 07_comunicacion_serie.md
     - Pantalla LCD: 10_pantalla_lcd.md
     - Servo motor: 12_servo_motors.md
-    - ------: about.md
-    - XBee Modules: 11_xbee_modules.md
-    - Sonidos con Arduino: 08_sonidos.md
-    - Onewire sensor: 09_medicion_temperatura_ds18b20.md
+ #   - XBee Modules: 11_xbee_modules.md
+ #   - Sonidos con Arduino: 08_sonidos.md
+ #   - Onewire sensor: 09_medicion_temperatura_ds18b20.md
     - About: about.md
 theme: readthedocs

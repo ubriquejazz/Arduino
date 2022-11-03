@@ -41,7 +41,7 @@ For the **Sweep** example, connect the servo motor to +5V, GND and pin 9.
 
 Controlling a servo position using a potentiometer (variable resistor).
 
-```arduino
+```c
 #include <Servo.h>
 
 Servo myservo;  // create servo object to control a servo
@@ -64,7 +64,7 @@ void loop() {
 
 Sweeps the shaft of a RC servo motor back and forth across 180 degrees.
 
-```arduino
+```c
 #include <Servo.h>
 
 Servo myservo;  // create servo object to control a servo

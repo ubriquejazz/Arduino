@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ubriquejazz.github.io/13_hc_sr04/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Ultrasonidos - Arduino</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ultrasonidos";
+        var mkdocs_page_input_path = "13_hc_sr04.md";
+        var mkdocs_page_url = "/13_hc_sr04/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Arduino
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_que_es_arduino/">Que es Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_ide_arduino/">IDE Arduino</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_ejemplo_semaforo/">Ejemplo LEDs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_salidas/">Pines de salida</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_entradas_analogicas_y_digitales/">Pines de entrada</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_entradas_botones/">Boton e interruptor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_comunicacion_serie/">Comunicacion serie</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10_pantalla_lcd/">Pantalla LCD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12_servo_motors/">Servo motor</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Ultrasonidos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#material-and-connection">Material and Connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#distance-calclulating">Distance Calclulating</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programming-code">Programming Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Arduino</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Ultrasonidos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="hc-sr04-sensor">HC-SR04 Sensor</h1>
+<p>The HC-SR04 is a sensor that can measure <strong>distance</strong>. It emits an <strong>ultrasound</strong> at <strong>40 000 Hz (40kHz)</strong> which travels through the air and if there is an object or obstacle on its path It will bounce back to the module. Considering the travel time and the speed of the sound you can calculate the distance.</p>
+<p>The configuration pin of HC-SR04 is VCC (1), TRIG (2), ECHO (3), and GND (4). The <strong>supply voltage</strong> of VCC is <strong>+5V</strong> and you can attach TRIG and ECHO pin to any Digital I/O in your Arduino Board.</p>
+<p><img alt="Ultrasonic Sensor HC-SR04 Configuration and Specification" src="https://hackster.imgix.net/uploads/attachments/991537/uploads2ftmp2f95250d93-b617-40b9-956c-3294973543a02fultrasonic428229_UYEDpDPTPU.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" /></p>
+<p><img alt="Ultrasonic Sensor HC-SR04 Principle" src="https://hackster.imgix.net/uploads/attachments/991535/uploads2ftmp2f32fa411f-a038-48d7-88ce-7de713550efd2fultrasonic3_oEttj9k6S3.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" />Ultrasonic Principle</p>
+<h2 id="material-and-connection">Material and Connection</h2>
+<p>The <strong>materials</strong> that we need to make this project:</p>
+<ol>
+<li>
+<p>Arduino UNO R3 CH340 (you can use any Arduino Boards)</p>
+</li>
+<li>
+<p>Ultrasonic Sensor HC-SR04</p>
+</li>
+<li>
+<p>Male to Male Jumper Wires</p>
+</li>
+<li>
+<p>Breadboard</p>
+</li>
+</ol>
+<p><img alt="img" src="https://hackster.imgix.net/uploads/attachments/992297/uploads2ftmp2f23fd510c-100e-44e6-ab79-419f928da5262fultrasonic8_De5xqthGXn.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" /></p>
+<p>The <strong>connection</strong> of Arduino and Ultrasonic Sensor HC-SR04</p>
+<p><img alt="Connection of Arduino UNO and HC-SR04" src="https://hackster.imgix.net/uploads/attachments/991561/uploads2ftmp2ff6c8de93-288c-4663-9a29-31c8e61172812fultrasonic5_WCDWvutJmv.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" />Connection of Arduino UNO and HC-SR04</p>
+<h2 id="distance-calclulating">Distance Calclulating</h2>
+<p>In order to generate the ultrasound we need to set the <strong>Trigger Pin</strong> on a <strong>High</strong> State for <strong>10 µs</strong>. That will send out an 8 cycle sonic burst which will travel at the speed sound and it will be received in the Echo Pin. The Echo Pin will <strong>output</strong> the <strong>time</strong> in microseconds the sound wave traveled.</p>
+<p><img alt="Ultrasonic HC-SR04 timing diagram" src="https://hackster.imgix.net/uploads/attachments/991564/uploads2ftmp2f0e8762c9-13ef-48e3-8ee9-838c7f24ca8d2f2_ultrasonic_module_timing_diagram_IoXUGXtipu.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" />Ultrasonic HC-SR04 timing diagram</p>
+<p>For example, if the object is 20 cm away from the sensor, and the speed of the sound is <strong>340 m/s</strong> or 0.034 cm/µs the sound wave will need to travel about 588 microseconds. But what you will get from the Echo pin will be <strong>double</strong> that number because the sound wave needs to <strong>travel forward</strong> and <strong>bounce backward</strong>. So in order to get the distance in cm we need to multiply the received travel time value from the echo pin by 0.034 and divide it by 2.</p>
+<p><img alt="Distance calculating" src="https://hackster.imgix.net/uploads/attachments/991669/uploads2ftmp2f0e12a52d-2950-4800-af67-23366779fb052fultrasonic7_J8OKAo0qX2.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" />Distance calculating</p>
+<h2 id="programming-code">Programming Code</h2>
+<p>First we need to define the Trigger Pin and Echo Pin that connected to Arduino board. In this project EchoPin is attached to <strong>D2</strong> and TrigPin to <strong>D3.</strong> Then define variables for the distance (int) and duration (long).</p>
+<pre><code class="language-c">// ---------------------------------------------------------------- //
+// Arduino Ultrasoninc Sensor HC-SR04
+// ---------------------------------------------------------------- //
+
+#define echoPin 2 // attach pin D2 Arduino to pin Echo of HC-SR04
+#define trigPin 3 //attach pin D3 Arduino to pin Trig of HC-SR04
+
+// defines variables
+long duration; // variable for the duration of sound wave travel
+int distance; // variable for the distance measurement
+
+void setup() {
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an OUTPUT
+  pinMode(echoPin, INPUT); // Sets the echoPin as an INPUT
+  Serial.begin(9600); // // Serial Communication is starting with 9600 of baudrate speed
+  Serial.println(&quot;Ultrasonic Sensor HC-SR04 Test&quot;); // print some text in Serial Monitor
+  Serial.println(&quot;with Arduino UNO R3&quot;);
+}
+</code></pre>
+<p>In the loop first you have to make sure that the trigPin is clear so we have to set that pin on a <strong>LOW State</strong> for just <strong>2 µs</strong>. Now for generating the <strong>ultrasound</strong> wave we have to set the <strong>trigPin</strong> on <strong>HIGH State</strong> for <strong>10 µs</strong>. </p>
+<pre><code class="language-c">void loop() {
+  // Clears the trigPin condition
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  // Calculating the distance
+  distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+  // Displays the distance on the Serial Monitor
+  Serial.print(&quot;Distance: &quot;);
+  Serial.print(distance);
+  Serial.println(&quot; cm&quot;);
+}
+</code></pre>
+<p>Using the <strong><em>pulseIn()</em></strong> function you have to read the travel time and put that value into the variable “duration”. This function has 2 parameters, the first one is the name of the echo pin and for the second one you can write either HIGH or LOW. In this case, HIGH means that the <strong><em>pulseIn()</em></strong> function will wait for the pin to go HIGH caused by the bounced sound wave and it will start timing, then it will wait for the pin to go LOW when the sound wave will end which will stop the timing. At the end the function will return the length of the pulse in microseconds. </p>
+<p>For getting the distance we will multiply the duration by 0.034 and divide it by 2 as we explained this equation previously. At the end we will print the value of the distance on the Serial Monitor.</p>
+<h2 id="conclusion">Conclusion</h2>
+<ol>
+<li>
+<p>First do the wiring as shown in the picture</p>
+</li>
+<li>
+<p>Open Arduino IDE and write down your code, or download the code below and open it</p>
+</li>
+<li>
+<p>Choose your own Arduino board (in this case Arduino Uno)</p>
+</li>
+<li>
+<p>Choose your COM Port (usually it appears only one existing port)</p>
+</li>
+<li>
+<p>Upload your code by pressing <strong>Ctrl + U</strong> or <strong>Sketch</strong> &gt; <strong>Upload</strong></p>
+</li>
+<li>
+<p>To display the measurement data you can use Serial Monitor by pressing <strong>Ctrl + Shift + M</strong> (make sure that the baudrate speed is 9600)</p>
+</li>
+</ol>
+<p>After uploading the code, display the data with Serial Monitor (Ctrl + Shift + M). Now try to give an object in front of the sensor and see the measurement.</p>
+<p><img alt="img" src="https://hackster.imgix.net/uploads/attachments/992303/uploads2ftmp2f15bcc4a7-5ae7-4143-af98-fc4c769354572fscreenshot282029_d9878PJBY3.png?auto=compress%2Cformat&amp;w=680&amp;h=510&amp;fit=max" /></p>
+<p>For the consideration, you can use your manual tape meter to measure the distance and compare it with the distance on Serial Monitor. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../12_servo_motors/" class="btn btn-neutral float-left" title="Servo motor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../12_servo_motors/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
